@@ -1,0 +1,23 @@
+.footer {
+    height: 90px;
+    margin-top: 90px;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.credits {
+    width: 50%;
+    border-top: 1px solid grey;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+
+    padding-top: 20px;
+}
+
+.credits-dark p {
+    color: white;
+}

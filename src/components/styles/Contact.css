@@ -1,0 +1,120 @@
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    margin-top: 200px;
+    text-align: center;
+    align-items: center;
+}
+
+.phone {
+    height: auto;
+    width: auto;
+
+    max-width: 300px;
+    margin-top: 50px;
+}
+
+.contact-image h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 800;
+    font-size: 40px;
+    color: #641411;
+}
+
+.contact-image-dark h1 {
+    color: #C61A27;
+}
+
+.contact .contact-form form{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+.contact .contact-form form button{
+    align-self: flex-start;
+}
+
+.suavisado{
+    border-radius: 5px;
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 10px;
+}
+
+
+input, select, textarea{
+    border: 0;
+    padding: 5px;
+    padding-left: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+textarea {
+    height: 130px;
+    resize: none;
+}
+
+.contact-button {
+    border: 0;
+    font-weight: 800;
+    height: 30px;
+    width: 70px;
+
+    background-color: white;
+}
+
+.contact-button:hover{
+    background-color: black;
+    color: white;
+}
+
+textarea:focus, input:focus {
+    color: black;
+    font-weight:800;
+}
+
+
+
+@media (max-width: 768px){
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .contact .contact-form form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 300px;
+    }
+
+    .contact .contact-form{
+        display: flex;
+        justify-content: center;
+
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px ) and (max-width: 1024px){
+    
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .contact .contact-form{
+        display: flex;
+        justify-content: center;
+
+        margin-top: 30px;
+    }
+
+    .contact .contact-form form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 500px;
+    }
+}

@@ -1,0 +1,26 @@
+.SkillsIcons{
+    width: 50%;
+}
+
+.title-skills p {
+    text-align: start;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color:#641411;
+}
+
+.title-skills-dark p {
+    color:#C61A27;
+}
+
+.icon-skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.icon-skills img{
+    height: auto;
+    width: auto;
+    max-width: 50px;
+    margin: 10px;
+}

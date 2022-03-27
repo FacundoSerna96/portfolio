@@ -8,10 +8,12 @@ import Contact from './Contact';
 import Footer from './Footer';
 
 import './styles/App.css';
+import DataProvider from '../Helpers/Context';
+
 
 const App = () => {
   return (
-    <>
+    <DataProvider>
       <Navbar />
       <Hero />
       <About />
@@ -19,7 +21,7 @@ const App = () => {
       <Experience />
       <Contact />
       <Footer />
-    </>
+    </DataProvider>
   );
 }
 
