@@ -24,3 +24,31 @@
     max-width: 50px;
     margin: 10px;
 }
+
+
+
+@media (max-width: 800px){
+    .SkillsIcons{
+        width: 100%;
+        margin-top: 50px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icon-skills{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+    }
+
+    .title-skills p {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .icon-skills img{
+        max-width: 70px;
+        margin: 10px;
+    }
+}
