@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.aef8c451.css",
-    "main.js": "/portfolio/static/js/main.ba7894b0.js",
-    "static/media/laptop-oscuro.gif": "/portfolio/static/media/laptop-oscuro.903cbc339b83d2d429e9.gif",
-    "static/media/laptop-claro.gif": "/portfolio/static/media/laptop-claro.56398c889e6a40faddff.gif",
+    "main.css": "/portfolio/static/css/main.c6776d7b.css",
+    "main.js": "/portfolio/static/js/main.8fbdac43.js",
+    "static/media/laptop-oscuro.gif": "/portfolio/static/media/laptop-oscuro.cd25b157dcc0894010a1.gif",
+    "static/media/laptop-claro.gif": "/portfolio/static/media/laptop-claro.40d8dfbcc117e757ca16.gif",
     "static/media/profile.jpeg": "/portfolio/static/media/profile.c44700f2a73a6762a91b.jpeg",
     "static/media/profile-circle.jpg": "/portfolio/static/media/profile-circle.071123838ed5caed0c3c.jpg",
     "static/media/telefono-claro.png": "/portfolio/static/media/telefono-claro.99bf2d87b8ea8f766ce0.png",
@@ -11,11 +11,11 @@
     "static/media/desktop-claro.png": "/portfolio/static/media/desktop-claro.0e8de057a7b0bc3aa4b8.png",
     "static/media/desktop-oscuro.png": "/portfolio/static/media/desktop-oscuro.318ae724b73ba51d8ab6.png",
     "index.html": "/portfolio/index.html",
-    "main.aef8c451.css.map": "/portfolio/static/css/main.aef8c451.css.map",
-    "main.ba7894b0.js.map": "/portfolio/static/js/main.ba7894b0.js.map"
+    "main.c6776d7b.css.map": "/portfolio/static/css/main.c6776d7b.css.map",
+    "main.8fbdac43.js.map": "/portfolio/static/js/main.8fbdac43.js.map"
   },
   "entrypoints": [
-    "static/css/main.aef8c451.css",
-    "static/js/main.ba7894b0.js"
+    "static/css/main.c6776d7b.css",
+    "static/js/main.8fbdac43.js"
   ]
 }
