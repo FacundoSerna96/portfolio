@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    height: 500px;
 }
 
 .title {
@@ -51,11 +53,24 @@ h1 {
 }
 
 .hero-image {
+    position: relative;
+    top: 0px;
+
     height: auto;
     width: auto;
     max-width: 300px;
-
     margin-top: 30px;
+    z-index: 1;
+}
+
+.coffee-steam{
+    position: absolute;
+    padding-top: 190px;
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    margin-top: 30px;
+    z-index: 2;
 }
 
 
@@ -80,10 +95,21 @@ h1 {
     .hero-image {
         margin-top: 50px;
     }
+
+    .coffee-steam{
+        padding-top: 175px;
+    }
 }
 
 @media only screen and (min-width : 452px) and (max-width: 952px){
     .typewriter {
         font-size: 20px;
+    }
+    .typewriter-dark {
+        font-size: 20px;
+    }
+
+    .coffee-steam{
+        padding-top: 175px;
     }
 }

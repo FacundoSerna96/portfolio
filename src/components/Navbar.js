@@ -55,7 +55,7 @@ const Navbar = () => {
 
       
       <div className="logo">
-        <a href="#" className=''>
+        <a href="#/" className=''>
           <img src={contextSkin? LogoClaro : LogoOscuro} alt="" className='logo-img'/>
         </a>
         <button className='buttonNavbar' onClick={HandlerMenu}>

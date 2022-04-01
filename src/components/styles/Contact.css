@@ -75,6 +75,14 @@ textarea:focus, input:focus {
     font-weight:800;
 }
 
+.enviado{
+    display: inline;
+}
+
+.displayOff{
+    display: none;
+}
+
 
 
 @media (max-width: 768px){

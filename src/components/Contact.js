@@ -1,4 +1,6 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useRef, useState } from 'react'
+import emailjs from '@emailjs/browser';
+
 import { DataContext } from '../Helpers/Context';
 
 import './styles/Contact.css';
@@ -12,7 +14,27 @@ import useOnScreen from '../Hooks/useOnScreen'
 
 const Contact = () => {
 
-  const {contextSkin} = useContext(DataContext)
+  const [enviado, setEnviado] = useState(false)
+
+  //para mandar email
+  //con la libreria emailjs
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_7jvwxtc', 'template_1xwqagl', e.target, 'q85jz7eaHTaJie90g')
+      .then((result) => {
+          setEnviado((m) => m = true);
+          console.log('OK');
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
+
+
+  const {contextSkin} = useContext(DataContext);
 
   const ref = useRef();
   const isVisible = useOnScreen(ref);
@@ -26,12 +48,18 @@ const Contact = () => {
 
       <div ref={ref} 
         className={isVisible? 'contact-form animate__animated animate__fadeInUp' : 'displayHidden'}>
-        <form action="">
-          <input type="text" name="" className='suavisado'  placeholder='Nombre'/>
-          <input type="email" name="" className='suavisado' placeholder='Email'/>
-          <textarea name="" className='suavisado' cols="30" rows="1" placeholder='Escribi tu mensaje'></textarea>
-          <button className='contact-button suavisado'>Enviar</button>
+        <form ref={form} onSubmit={sendEmail}>
+          <input type="text" name="from_name" className='suavisado'  placeholder='Nombre' />
+          <input type="email" name="from_email" className='suavisado' placeholder='Email' />
+          <textarea name="message" className='suavisado' cols="30" rows="1" placeholder='Escribi tu mensaje'></textarea>
+          <input className='contact-button suavisado' type="submit" value="Enviar" />
+          <div className={enviado? 'enviado' : 'displayOff'}>
+            El mensaje fue enviado exitosamente.
+          </div>
         </form>
+
+        
+
       </div>
     </div>
   )
