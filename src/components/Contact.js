@@ -54,7 +54,7 @@ const Contact = () => {
           <textarea name="message" className='suavisado' cols="30" rows="1" placeholder='Escribi tu mensaje'></textarea>
           <input className='contact-button suavisado' type="submit" value="Enviar" />
           <div className={enviado? 'enviado' : 'displayOff'}>
-            El mensaje fue enviado exitosamente.
+            <p className={contextSkin? 'enviado-dark' : 'enviado'}>El mensaje fue enviado exitosamente.</p>
           </div>
         </form>
 

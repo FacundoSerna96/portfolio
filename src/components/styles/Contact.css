@@ -77,6 +77,11 @@ textarea:focus, input:focus {
 
 .enviado{
     display: inline;
+    color: black;
+}
+
+.enviado-dark{
+    color: white;
 }
 
 .displayOff{
