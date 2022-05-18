@@ -20,7 +20,6 @@ const Card = ({imgUrl, title , desc, desc2,gitUrl, demoUrl, techList}) => {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     maxWidth: '800px',
-    width: '800px',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,

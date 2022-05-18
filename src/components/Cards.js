@@ -16,7 +16,7 @@ const Cards = ({isExp = true}) => {
               imgUrl='https://i.ibb.co/HXSqGmV/alfa.png'
               title='Gestión de ventas Alpha'
               desc='Registro y control de ventas, turnos, instructores y alumnos.'
-              desc2='hola'
+              desc2=''
               gitUrl=''
               demoUrl=''
               techList={['Material UI', 'React Router', 'Axios', 'JWT', 'MongoDB']}/>

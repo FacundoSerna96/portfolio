@@ -31,13 +31,13 @@ function About() {
 
         <div className={contextSkin? 'about-body about-body-dark' : 'about-body'}>
           <h2>Facundo Serna</h2>
-          <p>Soy apasionado a la tecnologia, el desarrollo de software y a la
+          <p>Soy apasionado a la tecnología, el desarrollo de software y a la
             resolucion de problemas.</p>
-          <p>Me recibi de Analista Programador Universitario en la Universidad
+          <p>Me recibí de Analista Programador Universitario en la Universidad
             Nacional de la Patagonia San Juan Bosco, sede Esquel, Chubut,
             Argentina.</p>
           <p>Actualmente participo en diferentes proyectos
-            personales y constantemente me estoy capasitando en las nuevas
+            personales y constantemente me estoy capacitando en las nuevas
             tecnologias.</p>
 
           <div className="buttonsContact">
