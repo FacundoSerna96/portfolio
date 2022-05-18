@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
 import './styles/Card.css';
@@ -12,7 +11,7 @@ import { DataContext } from '../Helpers/Context';
 
 
 
-const Card = ({imgUrl, title , desc, gitUrl, demoUrl, techList}) => {
+const Card = ({imgUrl, title , desc, desc2,gitUrl, demoUrl, techList}) => {
 
   const style = {
     display : 'flex',
@@ -20,7 +19,8 @@ const Card = ({imgUrl, title , desc, gitUrl, demoUrl, techList}) => {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '600',
+    maxWidth: '800px',
+    width: '800px',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
@@ -57,19 +57,16 @@ const Card = ({imgUrl, title , desc, gitUrl, demoUrl, techList}) => {
           </div>
 
           <div className={contextSkin ? 'modalBody modalBody-dark' : 'modalBody'}>
-            <Typography 
+            <p 
               className={contextSkin ? 'modalTitle modalTitle-dark' : 'modalTitle'}
-              id="modal-modal-title" 
-              variant="h6" 
-              component="h2">
+              >
               {title}
-            </Typography>
-            <Typography 
+            </p>
+            <p 
               className={contextSkin ? 'modalDesc-dark modalDesc' : 'modalDesc'  }
-              id="modal-modal-description" 
-              sx={{ mt: 2, mb:2 }}>
-                {desc}
-            </Typography>
+              >
+                {desc2 ? desc2 : desc}
+            </p>
             <p className={contextSkin ? 'modalDesc-dark modalDesc' : 'modalDesc'  }>Tecnologias aplicadas:</p>
             <div className={contextSkin ? "modalTechs modalTechs-dark" : "modalTechs"}>
               {techList.map((t) => {
@@ -87,8 +84,21 @@ const Card = ({imgUrl, title , desc, gitUrl, demoUrl, techList}) => {
           <h2>{title}</h2>
           <p>{desc}</p>
           <div className={contextSkin? 'buttons-card buttons-card-dark' : 'buttons-card'}>
-            <button onClick={HandlerDemo}>View Demo</button>
-            <button onClick={HandlerGit}>View GitHub Repo</button>
+            {
+              demoUrl 
+              ? 
+                <button onClick={HandlerDemo}>View Demo</button>
+              : 
+                ''
+            }
+            {
+              gitUrl 
+              ? 
+                <button onClick={HandlerGit}>View GitHub Repo</button> 
+              : 
+                ''
+            }
+            
           </div>
       </div>
     </>
