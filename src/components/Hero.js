@@ -28,7 +28,7 @@ function Hero() {
             loop: true,
           }}
           onInit={(typewriter) => {
-            typewriter.typeString('Y soy desarollador full stack junior')
+            typewriter.typeString('Y soy desarrollador full stack')
               .pauseFor(2500)
               .changeDeleteSpeed(30)
               .deleteAll()

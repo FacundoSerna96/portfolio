@@ -87,12 +87,16 @@
     margin-top: 30px;
     margin-left: 10px;
     padding: 10px;
+
+    cursor: pointer;
 }
 
 .button-cv-dark{
     color:#C61A27;
     border: 2px solid #C61A27;
     background-color: transparent;
+
+    cursor: pointer;
 }
 
 .button-cv:hover{

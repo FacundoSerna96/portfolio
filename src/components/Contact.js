@@ -15,6 +15,7 @@ import useOnScreen from '../Hooks/useOnScreen'
 const Contact = () => {
 
   const [enviado, setEnviado] = useState(false)
+  const [error, setError] = useState(false)
 
   //para mandar email
   //con la libreria emailjs
@@ -22,16 +23,33 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setError(verificarDatos(e))
+  };
 
-    emailjs.sendForm('service_7jvwxtc', 'template_1xwqagl', e.target, 'q85jz7eaHTaJie90g')
+
+  const verificarDatos = (e) => {
+    if(e.target[0].value === ''){
+      return true
+    }else if(e.target[1].value=== ''){
+      return true
+    }else if (e.target[2].value=== ''){
+      return true
+    }else{
+      enviarMail(e)
+      return false
+    }   
+  }
+
+  const enviarMail = (e) => {
+      //si todo salio bien se envia el mensaje
+      emailjs.sendForm('service_7jvwxtc', 'template_1xwqagl', e.target, 'q85jz7eaHTaJie90g')
       .then((result) => {
           setEnviado((m) => m = true);
           console.log('OK');
       }, (error) => {
           console.log(error.text);
       });
-  };
-
+  }
 
 
   const {contextSkin} = useContext(DataContext);
@@ -56,6 +74,14 @@ const Contact = () => {
           <div className={enviado? 'enviado' : 'displayOff'}>
             <p className={contextSkin? 'enviado-dark' : 'enviado'}>El mensaje fue enviado exitosamente.</p>
           </div>
+
+          {error 
+          ?  
+          <div className={'enviado'}>
+            <p className={contextSkin? 'enviado-dark' : 'enviado'}>Por favor complete todos los datos.</p>
+          </div>
+          : 
+          ''}
         </form>
 
         
