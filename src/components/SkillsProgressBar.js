@@ -4,17 +4,22 @@ import { DataContext } from '../Helpers/Context';
 import './styles/SkillsProgressBar.css';
 
 import ProgressBar from "@ramonak/react-progress-bar";
-import htmlClaro from '../assets/logos/html-logo-claro.png';
-import cssClaro from '../assets/logos/css-logo-claro.png';
+
+
 import jsClaro from '../assets/logos/js-logo-claro.png';
 import reactClaro from '../assets/logos/react-logo-claro.png';
 import nodeClaro from '../assets/logos/node-logo-claro.png';
 
-import htmlOscuro from '../assets/logos/html-logo-oscuro.png';
-import cssOscuro from '../assets/logos/css-logo-oscuro.png';
+
 import jsOscuro from '../assets/logos/js-logo-oscuro.png';
 import reactOscuro from '../assets/logos/react-logo-oscuro.png';
 import nodeOscuro from '../assets/logos/node-logo-oscuro.png';
+
+import iconMongo from '../assets/logos/mongo-logo-claro.png';
+import iconMongoDark from '../assets/logos/mongo-logo-oscuro.png';
+
+import iconSql from '../assets/logos/sql-logo-claro.png';
+import iconSqlDark from '../assets/logos/sql-logo-oscuro.png';
 
 
 const SkillsProgressBar = () => {
@@ -25,81 +30,53 @@ const SkillsProgressBar = () => {
 
   return (
     <div className='SkillsProgressBar'>
-      <div className="html icon-skill">
-        <img src={contextSkin? htmlOscuro : htmlClaro} alt="" />
-        <div className={progressBar}>
-          <p>html</p>
-          <ProgressBar 
-            completed={100} 
-            maxCompleted={100} 
-            width={"300px"}
-            bgColor={bgColor}
-            animateOnRender={true}
-            labelClassName="label-progress-bar"
-            initCompletedOnAnimation={30}
-            transitionDuration={'2s'}/>
-        </div>
-      </div>
-      <div className="css icon-skill">
-        <img src={contextSkin? cssOscuro : cssClaro} alt="" />
-        <div className={progressBar}>
-          <p>css</p>
-          <ProgressBar 
-            completed={80} 
-            maxCompleted={100} 
-            width={"300px"}
-            bgColor={bgColor}
-            animateOnRender={true}
-            labelClassName="label-progress-bar"
-            initCompletedOnAnimation={30}
-            transitionDuration={'2s'}/>
-        </div>
-      </div>
-      <div className="js icon-skill">
-        <img src={contextSkin? jsOscuro : jsClaro} alt="" />
-        <div className={progressBar}>
-          <p>javascript</p>
-          <ProgressBar 
-            completed={70} 
-            maxCompleted={100} 
-            width={"300px"}
-            bgColor={bgColor}
-            animateOnRender={true}
-            labelClassName="label-progress-bar"
-            initCompletedOnAnimation={30}
-            transitionDuration={'2s'}/>
-        </div>
-      </div>
       <div className="react icon-skill">
         <img src={contextSkin? reactOscuro : reactClaro} alt="" />
         <div className={progressBar}>
-          <p>react js</p>
-          <ProgressBar 
-            completed={60} 
-            maxCompleted={100} 
-            width={"300px"}
-            bgColor={bgColor}
-            animateOnRender={true}
-            labelClassName="label-progress-bar"
-            initCompletedOnAnimation={30}
-            transitionDuration={'2s'}/>
+          <p>React JS</p>
+          <div className="skill-detail">
+            Redux - React Router DOM - Jest
+          </div>
         </div>
       </div>
       <div className="node icon-skill">
         <img src={contextSkin? nodeOscuro : nodeClaro} alt="" />
         <div className={progressBar}>
-          <p>node js</p>
-          <ProgressBar 
-            completed={60} 
-            maxCompleted={100} 
-            width={"300px"}
-            bgColor={bgColor}
-            animateOnRender={true}
-            labelClassName="label-progress-bar"
-            initCompletedOnAnimation={30}
-            transitionDuration={'2s'}/>
+          <p>Node JS</p>
+          <div className="skill-detail">
+            REST API - Aplicaciones de consola 
+          </div>
         </div>
       </div>
+      <div className="js icon-skill">
+        <img src={contextSkin? jsOscuro : jsClaro} alt="" />
+        <div className={progressBar}>
+          <p>JavaScript</p>
+          <div className="skill-detail">
+            JSON - async/await - Expresiones Regulares 
+          </div>
+        </div>
+      </div>
+      <div className="sql icon-skill">
+        <img src={contextSkin? iconSqlDark : iconSql } alt="" />
+        <div className={progressBar}>
+          <p>MySQL</p>
+          <div className="skill-detail">
+            Diseño y gestion de base de datos - Stored Procedures
+          </div>
+        </div>
+      </div>
+      <div className="mongodb icon-skill">
+        <img src={contextSkin? iconMongoDark : iconMongo} alt="" />
+        <div className={progressBar}>
+          <p>MongoDB</p>
+          <div className="skill-detail">
+            Diseño y gestion de base de datos no relacionales
+          </div>
+        </div>
+      </div>
+      
+      
     </div>
   )
 }
