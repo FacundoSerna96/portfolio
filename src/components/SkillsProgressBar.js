@@ -34,7 +34,7 @@ const SkillsProgressBar = () => {
         <img src={contextSkin? reactOscuro : reactClaro} alt="" />
         <div className={progressBar}>
           <p>React JS</p>
-          <div className="skill-detail">
+          <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
             Redux - React Router DOM - Jest
           </div>
         </div>
@@ -43,7 +43,7 @@ const SkillsProgressBar = () => {
         <img src={contextSkin? nodeOscuro : nodeClaro} alt="" />
         <div className={progressBar}>
           <p>Node JS</p>
-          <div className="skill-detail">
+          <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
             REST API - Aplicaciones de consola 
           </div>
         </div>
@@ -52,7 +52,7 @@ const SkillsProgressBar = () => {
         <img src={contextSkin? jsOscuro : jsClaro} alt="" />
         <div className={progressBar}>
           <p>JavaScript</p>
-          <div className="skill-detail">
+          <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
             JSON - async/await - Expresiones Regulares 
           </div>
         </div>
@@ -61,7 +61,7 @@ const SkillsProgressBar = () => {
         <img src={contextSkin? iconSqlDark : iconSql } alt="" />
         <div className={progressBar}>
           <p>MySQL</p>
-          <div className="skill-detail">
+          <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
             Diseño y gestion de base de datos - Stored Procedures
           </div>
         </div>
@@ -70,7 +70,7 @@ const SkillsProgressBar = () => {
         <img src={contextSkin? iconMongoDark : iconMongo} alt="" />
         <div className={progressBar}>
           <p>MongoDB</p>
-          <div className="skill-detail">
+          <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
             Diseño y gestion de base de datos no relacionales
           </div>
         </div>

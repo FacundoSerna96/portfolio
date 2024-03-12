@@ -42,6 +42,12 @@
     margin-left: 10px;
 }
 
+.skill-detail-dark{
+    margin-top: 0;
+    margin-left: 10px;
+    color: white;
+}
+
 .label-progress-bar {
     font-family: 'Roboto Mono', monospace;
     color: grey;
