@@ -1,4 +1,32 @@
+.language{
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    color: black;
+}
 
+.language:hover{
+    color:gray;
+}
+
+.language-dark{
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    color: gray;
+}
+
+.language-dark:hover{
+    color:white;
+}
+
+.language-text{
+    font-size: 20px;
+}
 
 .Navbar{
     display: grid;
