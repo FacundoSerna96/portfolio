@@ -1,0 +1,276 @@
+body {
+    overflow-x: hidden; /* Oculta el scroll horizontal */
+  }
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+    background-color: #EAE7DC;
+    color: #641411;
+    margin-top: 100px;
+  }
+
+  .experience-container-dark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+    background-color: #1D131D;
+    color: #641411;
+    margin-top: 100px;
+  }
+  
+  .experience-title {
+    font-size: 1.875rem;
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 2.5rem;
+  }
+
+  .experience-title-dark {
+    font-size: 1.875rem;
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 2.5rem;
+    color:#E30613;
+  }
+  
+  .timeline {
+    position: relative;
+    width: 100%;
+    max-width: 50rem;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background-color: #641411;
+    height: 100%;
+  }
+
+  .timeline-line-dark {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background-color: #E30613;
+    height: 100%;
+  }
+  
+  .timeline-item {
+    position: relative;
+    display: flex;
+    align-items: start;
+    margin-bottom: 2.5rem;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #641411;
+    border-radius: 50%;
+  }
+
+  .timeline-dot-dark {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  .timeline-date {
+    font-size: 1.3rem;
+    font-family: monospace;
+    font-weight: bold;
+  }
+
+  .timeline-date-dark {
+    font-size: 1.3rem;
+    font-family: monospace;
+    color: white;
+  }
+  
+  .right-align {
+    width: 50%;
+    text-align: right;
+    padding-right: 1.5rem;
+    padding-top: 6px;
+  }
+  
+  .left-align {
+    width: 50%;
+    text-align: left;
+    padding-left: 1.5rem;
+    padding-top: 6px;
+  }
+  
+  .timeline-box {
+    width: 43%;
+    background-color: #641411;
+    margin-left: 45px;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .timeline-box-dark {
+    width: 43%;
+    background-color: #E30613;
+    margin-left: 45px;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .timeline-box-2 {
+    width: 43%;
+    background-color: #641411;
+    margin-right: 45px;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .timeline-box-2-dark {
+    width: 43%;
+    background-color: #E30613;
+    margin-right: 45px;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .company {
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 1px;
+    margin-left: 23px;
+  }
+  
+  .experience-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  .experience-list-dark {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+  }
+  
+  .experience-list li {
+    position: relative;
+    padding-left: 1.5rem; /* Espacio para el ícono */
+    margin-bottom: 0.5rem; /* Espaciado entre elementos de la lista */
+  }
+
+  .experience-list-dark li {
+    position: relative;
+    padding-left: 1.5rem; /* Espacio para el ícono */
+    margin-bottom: 0.5rem; /* Espaciado entre elementos de la lista */
+  }
+  
+  .experience-list li::before {
+    content: "■"; /* Caracter de un cuadrado */
+    color: #E30613; /* Color del ícono */
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0.2rem; /* Ajuste fino para alinear verticalmente */
+  }
+
+  .experience-list-dark li::before {
+    content: "■"; /* Caracter de un cuadrado */
+    color: #641411; /* Color del ícono */
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0.2rem; /* Ajuste fino para alinear verticalmente */
+  }
+
+
+  .bold-text {
+    font-weight: bold; /* Aplicar negrita */
+  }
+
+/* Responsive */
+@media (max-width: 800px) {
+    .experience-container {
+      padding: 1.5rem; /* Reducir el padding para pantallas pequeñas */
+    }
+  
+    .timeline {
+      max-width: 100%; /* Ocupar todo el ancho disponible */
+    }
+  
+    .timeline-line {
+      left: 20px; /* Mover la línea a la izquierda */
+    }
+  
+    .timeline-item {
+      flex-direction: column; /* Apilar elementos verticalmente */
+      align-items: flex-start; /* Alinear elementos a la izquierda */
+      margin-bottom: 1.5rem; /* Reducir el margen inferior */
+    }
+  
+    .timeline-dot {
+      left: 20px; /* Mover el punto a la izquierda */
+      top: 0; /* Ajustar la posición vertical */
+    }
+    
+  
+    .timeline-date {
+      width: 100%; /* Ocupar todo el ancho */
+      text-align: left; /* Alinear el texto a la izquierda */
+      padding-left: 3rem; /* Añadir padding para alinear con el punto */
+      padding-top: 0; /* Eliminar padding superior */
+      margin-bottom: 0.5rem; /* Añadir margen inferior */
+      order: 1; /* Mover la fecha arriba de la tarjeta */
+    }
+  
+    .right-align,
+    .left-align {
+      width: 100%; /* Ocupar todo el ancho */
+      text-align: left; /* Alinear el texto a la izquierda */
+      padding-left: 3rem; /* Añadir padding para alinear con el punto */
+      padding-right: 0; /* Eliminar padding derecho */
+      padding-top: 0; /* Eliminar padding superior */
+    }
+  
+    .timeline-box,
+    .timeline-box-2 {
+      width: 80%; /* Reducir el ancho de las tarjetas */
+      margin-left: 3rem; /* Separar las tarjetas de la línea de tiempo */
+      margin-right: 0; /* Eliminar margen derecho */
+      padding: 1rem; /* Reducir el padding */
+      border-radius: 0.5rem; /* Reducir el radio del borde */
+      order: 2; /* Mover la tarjeta debajo de la fecha */
+    }
+  
+    .company {
+      margin-left: 0; /* Eliminar margen izquierdo */
+    }
+  
+    .experience-list li {
+      padding-left: 1rem; /* Reducir el padding izquierdo */
+    }
+  
+    .experience-list li::before {
+      left: 0; /* Ajustar la posición del ícono */
+    }
+  }
