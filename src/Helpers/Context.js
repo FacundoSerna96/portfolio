@@ -8,9 +8,10 @@ export const DataContext = createContext();
 const DataProvider = ({children}) => {
 
   const [contextSkin, setContextSkin] = useState(false)
+  const [language, setLanguage] = useState(false)
 
   return (
-    <DataContext.Provider value={{contextSkin, setContextSkin}}>
+    <DataContext.Provider value={{contextSkin, setContextSkin, language, setLanguage}}>
         {children}
     </DataContext.Provider>
   )
