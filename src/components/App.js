@@ -4,6 +4,7 @@ import Hero from './Hero';
 import About from './About';
 import Skills from './Skills';
 import Experience from './Experience';
+import ExperienceTime from './ExperienceTime';
 import Contact from './Contact';
 import Footer from './Footer';
 
@@ -18,7 +19,8 @@ const App = () => {
       <Hero />
       <About />
       <Skills />
-      <Experience />
+      <ExperienceTime />
+      {/* <Experience /> */}
       <Contact />
       <Footer />
     </DataProvider>

@@ -56,7 +56,7 @@
 .photo > .image {
     background-image: url('../../assets/photos/profile.jpeg');
 
-    max-width: 300px;
+    max-width: 336px;
     max-height: 500px;
     height: auto;
     width: auto;
@@ -139,6 +139,17 @@
     display: none;
 }
 
+@media only screen and (max-width: 400px){
+
+    #about {
+        margin-top: 220px;
+    }
+
+    .about-body > p {
+        width: 300px;
+    }
+}
+
 
 @media only screen and (max-width: 576px){
 
@@ -147,7 +158,7 @@
     }
 
     .about-body > p {
-        width: 400px;
+        width: 300px;
     }
 }
 

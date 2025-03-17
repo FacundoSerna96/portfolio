@@ -14,12 +14,19 @@ import { DataContext } from '../Helpers/Context';
 
 function Hero() {
   const {contextSkin} = useContext(DataContext)
+  const {language} = useContext(DataContext)
 
 
   return (
     <div className='hero'>
       <div className='title'>
-        <h1 className={contextSkin? 'h1-dark': ''}>Hola! <span className={contextSkin? 'text-dark' : 'text-red'}>Soy Facundo</span></h1>
+        {
+          language 
+          ?
+          <h1 className={contextSkin? 'h1-dark': ''}>Hola! <span className={contextSkin? 'text-dark' : 'text-red'}>Soy Facundo</span></h1>
+          :
+          <h1 className={contextSkin? 'h1-dark': ''}>Hello! <span className={contextSkin? 'text-dark' : 'text-red'}>I'm Facundo</span></h1>
+        }
       </div>
 
       <div className={contextSkin? 'typewriter-dark' : 'typewriter'}>
