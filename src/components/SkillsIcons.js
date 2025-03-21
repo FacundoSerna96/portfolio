@@ -3,30 +3,32 @@ import { DataContext } from '../Helpers/Context';
 
 import './styles/SkillsIcons.css';
 
-import iconMongo from '../assets/skills/claro/mongo-claro.png';
 import iconGit from '../assets/skills/claro/git-claro.png';
 import iconLinux from '../assets/skills/claro/linux-claro.png';
 import iconBootstrap from '../assets/skills/claro/bootstrap-claro.png';
 import iconOffice from '../assets/skills/claro/office-claro.png';
-import iconExpress from '../assets/skills/claro/express-claro.png';
-import iconTs from '../assets/skills/claro/ts-claro.png';
-import iconAndroid from '../assets/skills/claro/android-claro.png';
-import iconC from '../assets/skills/claro/c-claro.png';
 
-import iconMongoDark from '../assets/skills/oscuro/mongo-oscuro.png';
+
 import iconGitDark from '../assets/skills/oscuro/git-oscuro.png';
 import iconLinuxDark from '../assets/skills/oscuro/linux-oscuro.png';
 import iconBootstrapDark from '../assets/skills/oscuro/bootstrap-oscuro.png';
 import iconOfficeDark from '../assets/skills/oscuro/office-oscuro.png';
-import iconExpressDark from '../assets/skills/oscuro/express-oscuro.png';
-import iconTsDark from '../assets/skills/oscuro/ts-oscuro.png';
-import iconAndroidDark from '../assets/skills/oscuro/android-oscuro.png';
-import iconCDark from '../assets/skills/oscuro/c-oscuro.png';
 
-import iconHtml from '../assets/skills/claro/html-claro.png';
-import iconCss from '../assets/skills/claro/css-claro.png';
-import iconHtmlDark from '../assets/skills/oscuro/html-oscuro.png';
-import iconCssDark from '../assets/skills/oscuro/css-oscuro.png';
+
+
+import iconAlfresco from '../assets/skills/claro/alfresco-claro.png'
+import iconAlfrescoDark from '../assets/skills/oscuro/alfresco-oscuro.png'
+import iconDocker from '../assets/skills/claro/docker-claro.png'
+import iconDockerDark from '../assets/skills/oscuro/docker-oscuro.png'
+import iconK8s from '../assets/skills/claro/k8s-claro.png'
+import iconK8sDark from '../assets/skills/oscuro/k8s-oscuro.png'
+import iconPostman from '../assets/skills/claro/postman-claro.png'
+import iconPostmanDark from '../assets/skills/oscuro/postman-oscuro.png'
+import iconTailwind from '../assets/skills/claro/tailwind-claro.png'
+import iconTailwindDark from '../assets/skills/oscuro/tailwind-oscuro.png'
+import iconMaterialui from '../assets/skills/claro/materialui-claro.png'
+import iconMaterialuiDark from '../assets/skills/oscuro/materialui-oscuro.png'
+
 
 
 import Tooltip from '@mui/material/Tooltip';
@@ -56,27 +58,27 @@ const SkillsIcons = () => {
           <img src={contextSkin? iconLinuxDark : iconLinux} alt="" />
         </Tooltip>
         <Tooltip title="Docker" placement="top" arrow>
-          <img src={contextSkin? iconHtmlDark : iconHtml} alt="" />
+          <img src={contextSkin? iconDockerDark : iconDocker} alt="" />
         </Tooltip>
         <Tooltip title="Kubernetes" placement="top" arrow>
-          <img src={contextSkin? iconCssDark : iconCss} alt="" />
+          <img src={contextSkin? iconK8sDark : iconK8s} alt="" />
         </Tooltip>
-        <Tooltip title="Alfresco" placement="top" arrow>
-          <img src={contextSkin? iconBootstrapDark : iconBootstrap} alt="" />  
-        </Tooltip>
-        <Tooltip title="MySQL" placement="bottom" arrow>
-          <img src={contextSkin? iconTsDark : iconTs} alt="" />
-        </Tooltip>
-        <Tooltip title="Postgres" placement="bottom" arrow>
-          <img src={contextSkin? iconExpressDark : iconExpress} alt="" />
+        <Tooltip title="Postman" placement="top" arrow>
+          <img src={contextSkin? iconPostmanDark : iconPostman} alt="" />
         </Tooltip>
         <Tooltip title="Bootstrap" placement="bottom" arrow>
-          <img src={contextSkin? iconAndroidDark : iconAndroid} alt="" />
+          <img src={contextSkin? iconBootstrapDark : iconBootstrap} alt="" />  
         </Tooltip>
         <Tooltip title="Tailwind" placement="bottom" arrow>
-          <img src={contextSkin? iconCDark : iconC} alt="" />
+          <img src={contextSkin? iconTailwindDark : iconTailwind} alt="" />
         </Tooltip>
-        <Tooltip title="Figma" placement="bottom" arrow>
+        <Tooltip title="Material UI" placement="bottom" arrow>
+          <img src={contextSkin? iconMaterialuiDark : iconMaterialui} alt="" />
+        </Tooltip>
+        <Tooltip title="Alfresco" placement="bottom" arrow>
+          <img src={contextSkin? iconAlfrescoDark : iconAlfresco} alt="" />
+        </Tooltip>
+        <Tooltip title="Office" placement="bottom" arrow>
           <img src={contextSkin? iconOfficeDark : iconOffice} alt="" />
         </Tooltip>
       </div>

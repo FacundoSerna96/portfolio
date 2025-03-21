@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
 import "./styles/Hero.css";
 
@@ -15,7 +15,6 @@ function Hero() {
   const { contextSkin } = useContext(DataContext);
   const { language } = useContext(DataContext);
 
-  const { title, setTitle } = useState("Y soy desarrollador full-stack");
 
   return (
     <div className="hero">
