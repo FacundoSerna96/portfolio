@@ -24,6 +24,7 @@ import iconSqlDark from '../assets/logos/sql-logo-oscuro.png';
 
 const SkillsProgressBar = () => {
   const {contextSkin} = useContext(DataContext)
+  const {language} = useContext(DataContext)
 
   let progressBar = contextSkin? 'progressBar progressBar-dark' : 'progressBar'
   let bgColor = contextSkin? '#C61A27' : '#641411' ;
@@ -33,45 +34,51 @@ const SkillsProgressBar = () => {
       <div className="react icon-skill">
         <img src={contextSkin? reactOscuro : reactClaro} alt="" />
         <div className={progressBar}>
-          <p>React JS</p>
+          <p>Angular (12 y 16)</p>
           <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
-            Redux - React Router DOM - Jest
+           TypeScript - RxJs - NgRx
           </div>
         </div>
       </div>
       <div className="node icon-skill">
         <img src={contextSkin? nodeOscuro : nodeClaro} alt="" />
         <div className={progressBar}>
-          <p>Node JS</p>
+          <p>React.JS</p>
           <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
-            REST API - Aplicaciones de consola 
+          Next.js - Redux - Jest
           </div>
         </div>
       </div>
       <div className="js icon-skill">
         <img src={contextSkin? jsOscuro : jsClaro} alt="" />
         <div className={progressBar}>
-          <p>JavaScript</p>
+          <p>Node</p>
           <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
-            JSON - async/await - Expresiones Regulares 
+            Nest.JS - Express - Sequalize - JWT
           </div>
         </div>
       </div>
       <div className="sql icon-skill">
         <img src={contextSkin? iconSqlDark : iconSql } alt="" />
         <div className={progressBar}>
-          <p>MySQL</p>
+          <p>AWS</p>
           <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
-            Diseño y gestion de base de datos - Stored Procedures
+            S3 - EC2 - EKS
           </div>
         </div>
       </div>
       <div className="mongodb icon-skill">
         <img src={contextSkin? iconMongoDark : iconMongo} alt="" />
         <div className={progressBar}>
-          <p>MongoDB</p>
+          <p>IA</p>
           <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
-            Diseño y gestion de base de datos no relacionales
+            {
+              language 
+              ?
+                "Integracion con OpenIA Api y ChatBots"
+              :
+                "Integration with OpenAI API and ChatBots"
+            }
           </div>
         </div>
       </div>

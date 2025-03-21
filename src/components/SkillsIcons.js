@@ -34,42 +34,49 @@ import Tooltip from '@mui/material/Tooltip';
 const SkillsIcons = () => {
 
   const {contextSkin} = useContext(DataContext)
+  const {language} = useContext(DataContext)
   
 
   return (
     <div className='SkillsIcons'>
       <div className={contextSkin? 'title-skills title-skills-dark' : 'title-skills'}>
-        <p>Otras habilidades</p>
+        {
+          language 
+          ?
+          <p>Otras habilidades</p>
+          :
+          <p>Other Skills</p>
+        }
       </div>
       <div className="icon-skills">
-        <Tooltip title="HTML" placement="top" arrow>
-          <img src={contextSkin? iconHtmlDark : iconHtml} alt="" />
-        </Tooltip>
-        <Tooltip title="CSS" placement="top" arrow>
-          <img src={contextSkin? iconCssDark : iconCss} alt="" />
-        </Tooltip>
         <Tooltip title="Git" placement="top" arrow>
           <img src={contextSkin? iconGitDark : iconGit} alt="" />
         </Tooltip>
         <Tooltip title="Linux" placement="top" arrow>
           <img src={contextSkin? iconLinuxDark : iconLinux} alt="" />
         </Tooltip>
-        <Tooltip title="Bootstrap" placement="top" arrow>
+        <Tooltip title="Docker" placement="top" arrow>
+          <img src={contextSkin? iconHtmlDark : iconHtml} alt="" />
+        </Tooltip>
+        <Tooltip title="Kubernetes" placement="top" arrow>
+          <img src={contextSkin? iconCssDark : iconCss} alt="" />
+        </Tooltip>
+        <Tooltip title="Alfresco" placement="top" arrow>
           <img src={contextSkin? iconBootstrapDark : iconBootstrap} alt="" />  
         </Tooltip>
-        <Tooltip title="TypeScript" placement="bottom" arrow>
+        <Tooltip title="MySQL" placement="bottom" arrow>
           <img src={contextSkin? iconTsDark : iconTs} alt="" />
         </Tooltip>
-        <Tooltip title="Express" placement="bottom" arrow>
+        <Tooltip title="Postgres" placement="bottom" arrow>
           <img src={contextSkin? iconExpressDark : iconExpress} alt="" />
         </Tooltip>
-        <Tooltip title="Android Studio" placement="bottom" arrow>
+        <Tooltip title="Bootstrap" placement="bottom" arrow>
           <img src={contextSkin? iconAndroidDark : iconAndroid} alt="" />
         </Tooltip>
-        <Tooltip title="C#" placement="bottom" arrow>
+        <Tooltip title="Tailwind" placement="bottom" arrow>
           <img src={contextSkin? iconCDark : iconC} alt="" />
         </Tooltip>
-        <Tooltip title="Office" placement="bottom" arrow>
+        <Tooltip title="Figma" placement="bottom" arrow>
           <img src={contextSkin? iconOfficeDark : iconOffice} alt="" />
         </Tooltip>
       </div>

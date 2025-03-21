@@ -14,6 +14,7 @@ import { DataContext } from '../Helpers/Context';
 
 const Skills = () => {
   const {contextSkin} = useContext(DataContext)
+  const {language} = useContext(DataContext)
 
   const ref = useRef();
   const isVisible = useOnScreen(ref);
@@ -21,7 +22,13 @@ const Skills = () => {
   return (
     <div className={'skills'} id='skills'>
       <div className={contextSkin? 'desktop desktop-dark' : 'desktop'}>
-        <h1>Skills</h1>
+        {
+          language
+          ?
+          <h1>Habilidades</h1>
+          :
+          <h1>Skills</h1>
+        }
         <img src={contextSkin? DesktopDark : Desktop} alt="" />
       </div>
 

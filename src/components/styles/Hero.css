@@ -46,6 +46,9 @@ h1 {
     color: white;
 }
 
+.displayNoneHero{
+    display: none;
+}
 
 .separator {
     width: 400px;

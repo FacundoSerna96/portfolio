@@ -24,18 +24,39 @@ const Navbar = () => {
   };
 
   const HandlerLanguage = () => {
+    if(!skin){
+      if(language){
+        setTextoSkin((t) => (t = "Dark Mode"));
+      }else{
+        setTextoSkin((t) => (t = "Modo Oscuro"));
+      }
+    }else{
+      if(language){
+        setTextoSkin((t) => (t = "Light Mode"));
+      }else{
+        setTextoSkin((t) => (t = "Modo Claro"));
+      }
+    }
     setLanguage(!language);
   };
 
   const HandlerSkin = () => {
     if (skin) {
       setSkin(false);
-      setTextoSkin((t) => (t = "Dark Mode"));
+      if(language){
+        setTextoSkin((t) => (t = "Modo Oscuro"));
+      }else{
+        setTextoSkin((t) => (t = "Dark Mode"));
+      }
 
       setContextSkin(false);
     } else {
       setSkin(true);
-      setTextoSkin((t) => (t = "Light Mode"));
+      if(language){
+        setTextoSkin((t) => (t = "Modo Claro"));
+      }else{
+        setTextoSkin((t) => (t = "Light Mode"));
+      }
 
       setContextSkin(true);
     }
