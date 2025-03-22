@@ -1,0 +1,43 @@
+# Archivos y carpetas de sistema operativo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Archivos de IDEs y editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Archivos de compilación y dependencias
+node_modules/
+bower_components/
+*.log
+*.lock
+*.out
+*.err
+build/
+dist/
+target/
+
+# Archivos de configuración de entornos
+.env
+.env.local
+.env.*.local
+
+# Archivos de compilación de lenguajes
+*.class
+*.jar
+*.war
+*.ear
+*.pyc
+*.pyo
+
+# Archivos de backup
+*.bak
+*.swp
+
+# Archivos de dependencias y librerías
+npm-debug.log
+yarn-debug.log
+yarn-error.log
