@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.d26d1468.css",
+    "main.js": "/portfolio/static/js/main.f7deacdd.js",
+    "static/media/humo-cafe-comprimido.gif": "/portfolio/static/media/humo-cafe-comprimido.82289c33fd8a31d792b7.gif",
+    "static/media/profile.jpeg": "/portfolio/static/media/profile.c44700f2a73a6762a91b.jpeg",
+    "static/media/CV.pdf": "/portfolio/static/media/CV.ee515d5f539aed95ed99.pdf",
+    "static/media/Resume.pdf": "/portfolio/static/media/Resume.fa4e3e9d0c04e40637ea.pdf",
+    "static/media/laptop-claro.png": "/portfolio/static/media/laptop-claro.50a502f12a5364bf9d19.png",
+    "static/media/laptop-oscuro.png": "/portfolio/static/media/laptop-oscuro.6fdc4ecc09c938bfaf89.png",
+    "static/media/profile-circle.jpg": "/portfolio/static/media/profile-circle.071123838ed5caed0c3c.jpg",
+    "static/media/telefono-claro.png": "/portfolio/static/media/telefono-claro.99bf2d87b8ea8f766ce0.png",
+    "static/media/telefono-oscuro.png": "/portfolio/static/media/telefono-oscuro.3101df296b8241057624.png",
+    "static/media/desktop-claro.png": "/portfolio/static/media/desktop-claro.0e8de057a7b0bc3aa4b8.png",
+    "static/media/desktop-oscuro.png": "/portfolio/static/media/desktop-oscuro.318ae724b73ba51d8ab6.png",
+    "index.html": "/portfolio/index.html",
+    "main.d26d1468.css.map": "/portfolio/static/css/main.d26d1468.css.map",
+    "main.f7deacdd.js.map": "/portfolio/static/js/main.f7deacdd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d26d1468.css",
+    "static/js/main.f7deacdd.js"
+  ]
+}
