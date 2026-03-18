@@ -1,67 +1,91 @@
-.skills{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    height: 500px;
-    margin-top: 200px;
+#skills {
+  scroll-margin-top: var(--nav-height);
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 36px;
+  align-items: start;
+  padding: 100px 8vw;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .displayHidden {
-    visibility: hidden;
+  visibility: hidden;
 }
 
-.skills .desktop .skill-components {
-    /* padding-right: 100px; */
+/* ─── Desktop image column ───────────────────────── */
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.desktop, .desktop-dark {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: sticky;
+  top: calc(var(--nav-height) + 40px);
+}
+
+.desktop > .section-label,
+.desktop-dark > .section-label {
+  margin-bottom: 10px;
+}
+
+.desktop > h1,
+.desktop-dark > h1 {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 42px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent);
+  margin-bottom: 40px;
+  letter-spacing: -0.01em;
+}
+
+.desktop img,
+.desktop-dark img {
+  height: auto;
+  width: 100%;
+  max-width: 220px;
+  opacity: 0.88;
+}
+
+/* ─── Skill components column ────────────────────── */
+
+.skill-components {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ─── Responsive ─────────────────────────────────── */
+
+@media (max-width: 800px) {
+  .skills {
+    grid-template-columns: 1fr;
+    padding: 80px 6vw;
+    gap: 48px;
+  }
+
+  .desktop, .desktop-dark {
+    position: static;
     align-items: center;
-}
+    text-align: center;
+  }
 
-.skills .desktop > h1 {
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 800;
-    color: #641411;
+  .desktop > h1,
+  .desktop-dark > h1 {
+    margin-bottom: 20px;
+  }
 
-    margin-bottom: 30px;
-    margin-right: 80px;
-}
+  .desktop img,
+  .desktop-dark img {
+    max-width: 140px;
+    margin-top: 16px;
+  }
 
-.skills .desktop-dark > h1{
-    color: #C61A27;
-}
-
-
-.skills .desktop img {
-    height: auto;
-    width: auto;
-
-    max-width: 300px;
-}
-
-@media only screen and (max-width: 500px){
-
-    .SkillsProgressBar{
-        padding: 20px;
-    }
-}
-
-@media (max-width: 800px){
-
-    .skills{
-        display: flex; 
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .desktop{
-        margin-bottom: 70px;
-    }
-
-    .desktop > h1{
-        margin-bottom: 70px;
-    }
-
+  .desktop > .section-label,
+  .desktop-dark > .section-label {
+    align-self: center;
+  }
 }

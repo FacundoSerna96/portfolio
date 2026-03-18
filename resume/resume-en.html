@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facundo Serna – Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 11pt;
+      line-height: 1.45;
+      color: #000;
+      background: #fff;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 22mm 22mm 28mm 22mm;
+    }
+
+    /* ── Header ── */
+    .header-name {
+      font-size: 22pt;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 4px;
+    }
+
+    .header-contact {
+      text-align: center;
+      font-size: 10pt;
+      margin-bottom: 5px;
+    }
+
+    .header-links {
+      text-align: center;
+      font-size: 10pt;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    /* ── Section titles ── */
+    h2 {
+      font-size: 11pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 2px;
+      margin-top: 13px;
+      margin-bottom: 8px;
+    }
+
+    /* ── Summary ── */
+    .summary p {
+      font-size: 10.5pt;
+      text-align: justify;
+    }
+
+    /* ── Experience entry ── */
+    .entry { margin-bottom: 12px; }
+
+    .entry-role {
+      font-size: 11pt;
+      font-weight: bold;
+    }
+
+    .entry-company {
+      font-size: 10.5pt;
+      font-style: italic;
+    }
+
+    .entry-meta {
+      font-size: 10pt;
+      color: #444;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 4px;
+    }
+
+    li {
+      font-size: 10.5pt;
+      margin-bottom: 3px;
+      text-align: justify;
+    }
+
+    /* ── Education ── */
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-institution { font-weight: bold; font-size: 11pt; }
+    .edu-degree { font-style: italic; font-size: 10.5pt; }
+    .edu-dates { font-size: 10pt; font-style: italic; color: #444; }
+
+    /* ── Skills table ── */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.5pt;
+    }
+
+    .skills-table td {
+      vertical-align: top;
+      padding: 3px 8px 3px 0;
+      width: 50%;
+    }
+
+    .skills-table td:last-child {
+      padding-right: 0;
+    }
+
+    .skill-label {
+      font-weight: bold;
+    }
+
+    /* ── Soft skills & Languages ── */
+    .soft-line, .lang-line {
+      font-size: 10.5pt;
+    }
+
+    /* ── Page breaks ── */
+    h2 { page-break-after: avoid; }
+    .entry { page-break-inside: avoid; }
+
+    .page-break { page-break-before: always; padding-top: 22mm; }
+
+    /* ── Print ── */
+    @media print {
+      body { padding: 22mm 22mm 28mm 22mm; }
+      @page { margin: 0; size: A4; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header-name">Facundo Serna</div>
+  <div class="header-contact">
+    Buenos Aires, Argentina &nbsp;·&nbsp; facuserna96@gmail.com
+  </div>
+  <div class="header-links">
+    linkedin.com/in/FacundoSerna &nbsp;·&nbsp; github.com/FacundoSerna96
+  </div>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <h2>Professional Summary</h2>
+  <div class="summary">
+    <p>
+      Full-Stack Developer &amp; DevOps Engineer with 3+ years of experience building scalable enterprise solutions. Specialized in content management platforms, BPM systems, cloud infrastructure, and AI workflow integration. Experienced leading infrastructure deployments on AWS EKS for enterprise clients, managing Alfresco, Keycloak, and Activiti ecosystems at scale. Passionate about automation, clean architecture, and leveraging AI tools to deliver real business value.
+    </p>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <h2>Work Experience</h2>
+
+  <div class="entry">
+    <div class="entry-role">Full Stack Developer &amp; DevOps Engineer</div>
+    <div class="entry-company">Proficient Enterprises</div>
+    <div class="entry-meta">August 2025 – Present &nbsp;·&nbsp; Cheyenne, Wyoming, USA &nbsp;·&nbsp; Remote</div>
+    <ul>
+      <li><b>Alfresco Content Services:</b> custom data model design, Web Scripts development, and multi-strategy search (Lucene, CMIS, FTS).</li>
+      <li><b>Activiti/APS BPM:</b> design and implementation of business processes, task forms, workflow automation, and process variable management.</li>
+      <li><b>Keycloak:</b> LDAP federation, OAuth2/JWT, custom login themes, and SSO integration across services.</li>
+      <li><b>AWS deployments:</b> CodePipeline, S3, EC2, EKS (Kubernetes + Helm), OpenSearch · Aurora RDS: query optimization and index creation.</li>
+      <li>Resolved critical issues: ACT_EVT_LOG bloat (7GB+), Spring Batch tuning, and HikariCP connection pool exhaustion.</li>
+      <li>Orchestrated MySQL to PostgreSQL and Docker to Kubernetes migrations across production and test environments.</li>
+      <li><b>AI automation:</b> n8n workflows with RAG pipelines, OpenAI embeddings, and pgvector integration.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-role">Full Stack Web Developer</div>
+    <div class="entry-company">ConoSurIT</div>
+    <div class="entry-meta">2022 – 2023 &nbsp;·&nbsp; Córdoba, Argentina</div>
+    <ul>
+      <li>Built and maintained enterprise web applications focused on document management and workflow automation using Angular, Node.js, and PostgreSQL.</li>
+      <li>Improved application performance by ~40% through component architecture refactoring and lazy loading strategies.</li>
+      <li>Designed and implemented a microservices-based backend that increased system modularity and scalability.</li>
+      <li>Handled task coordination within the development team, acting as technical reference during sprints.</li>
+      <li>Built REST APIs and integrated Alfresco CMIS for document storage and retrieval workflows.</li>
+    </ul>
+  </div>
+
+  <!-- EDUCATION -->
+  <h2 class="page-break">Education</h2>
+
+  <div class="entry">
+    <div class="edu-header">
+      <span class="edu-institution">National University of Patagonia (UNPSJB)</span>
+      <span class="edu-dates">2015 – 2019</span>
+    </div>
+    <div class="edu-degree">Bachelor's Degree in Software Development Analysis &nbsp;·&nbsp; Completed</div>
+  </div>
+
+  <!-- TECHNICAL SKILLS -->
+  <h2>Technical Skills</h2>
+
+  <table class="skills-table">
+    <tr>
+      <td>
+        <span class="skill-label">Frontend:</span><br>
+        Angular 12/16, React.js, Next.js, TypeScript,<br>
+        Redux, Tailwind CSS, Material UI, Bootstrap
+      </td>
+      <td>
+        <span class="skill-label">Backend:</span><br>
+        Node.js, NestJS, Express.js, REST APIs,<br>
+        JWT, Sequelize, Python
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="skill-label">Databases:</span><br>
+        PostgreSQL, MongoDB, Aurora RDS,<br>
+        pgvector, OpenSearch
+      </td>
+      <td>
+        <span class="skill-label">DevOps &amp; Cloud:</span><br>
+        AWS (EC2, S3, ECS, EKS, Lambda, CodePipeline),<br>
+        Kubernetes, Helm, Docker, CI/CD, GitHub Actions, Linux
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="skill-label">Enterprise Platforms:</span><br>
+        Alfresco (CMIS, Web Scripts, FTS),<br>
+        Keycloak (OAuth2, LDAP, JWT, SSO), Activiti/APS
+      </td>
+      <td>
+        <span class="skill-label">AI &amp; Automation:</span><br>
+        LangChain, LangGraph, RAG, AI Agents,<br>
+        Prompt Engineering, OpenAI API, n8n, Hugging Face
+      </td>
+    </tr>
+  </table>
+
+  <!-- SOFT SKILLS -->
+  <h2>Soft Skills</h2>
+  <div class="soft-line">
+    Team Work &nbsp;·&nbsp; Communication &nbsp;·&nbsp; Adaptability &nbsp;·&nbsp; Problem Solving &nbsp;·&nbsp; Self-taught &nbsp;·&nbsp; Proactivity &nbsp;·&nbsp; Technical Leadership
+  </div>
+
+  <!-- LANGUAGES -->
+  <h2>Languages</h2>
+  <div class="lang-line">
+    Spanish — Native &nbsp;·&nbsp; English — Intermediate (B1)
+  </div>
+
+</body>
+</html>

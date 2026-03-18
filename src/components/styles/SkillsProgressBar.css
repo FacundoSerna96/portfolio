@@ -1,58 +1,55 @@
-.icon-skill{
-    display: flex;
-    align-items: center;
-    margin-bottom: 0px;
+.SkillsProgressBar {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-skill {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border-soft);
+  transition: background-color 0.15s ease;
+}
+
+.icon-skill:last-child {
+  border-bottom: none;
 }
 
 .icon-skill > img {
-    height: auto;
-    width: auto;
-    max-width: 40px;
-    margin-right: 30px;
-    margin-bottom: 10px;
+  height: auto;
+  width: 40px;
+  flex-shrink: 0;
 }
 
-
-.progressBar{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    margin-bottom: 20px;
-    margin-top: 5px;
+.progressBar, .progressBar-dark {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
 }
 
-.progressBar p{
-    text-align: start;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
-    font-size: 15px;
-    color: #641411;
-
-    margin-bottom: 5px;
-    margin-left: 5px;
+.progressBar p, .progressBar-dark p {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0;
+  letter-spacing: 0.03em;
+  text-align: start;
 }
 
-.progressBar-dark p{
-    color: #C61A27;
-}
-
-.skill-detail{
-    margin-top: 0;
-    margin-left: 10px;
-}
-
-.skill-detail-dark{
-    margin-top: 0;
-    margin-left: 10px;
-    color: white;
+.skill-detail, .skill-detail-dark {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.01em;
+  margin-left: 0;
 }
 
 .label-progress-bar {
-    font-family: 'Roboto Mono', monospace;
-    color: grey;
-    font-weight: bold;
-
-    margin-bottom: 45px;
-    margin-right: 10px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-size: 12px;
+  margin: 0;
 }

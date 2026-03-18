@@ -1,8 +1,93 @@
-body {
-    background-color: #EAE7DC;
-    font-family: 'Hind', sans-serif;
+:root {
+  --bg: #EAE7DC;
+  --bg-rgb: 234, 231, 220;
+  --bg-surface: rgba(100, 20, 17, 0.04);
+  --text: #1D1317;
+  --text-muted: #7A706D;
+  --accent: #641411;
+  --accent-soft: rgba(100, 20, 17, 0.08);
+  --border: rgba(100, 20, 17, 0.18);
+  --border-soft: rgba(29, 19, 23, 0.08);
 
-    margin: 0;
-    height: 100%;
+  --font-display: 'Fraunces', serif;
+  --font-mono: 'Roboto Mono', monospace;
+  --font-body: 'Roboto Mono', monospace;
+
+  --transition: 0.3s ease;
+  --nav-height: 64px;
 }
 
+body.dark {
+  --bg: #0E0A0E;
+  --bg-rgb: 14, 10, 14;
+  --bg-surface: rgba(198, 26, 39, 0.05);
+  --text: #EAE7DC;
+  --text-muted: #9B9794;
+  --accent: #C61A27;
+  --accent-soft: rgba(198, 26, 39, 0.1);
+  --border: rgba(198, 26, 39, 0.22);
+  --border-soft: rgba(234, 231, 220, 0.07);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  margin: 0;
+  min-height: 100%;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+/* Background only on inner text containers so canvas shows around them */
+.about-body,
+.photo,
+.desktop,
+.desktop-dark,
+.skill-components,
+.contact-image,
+.contact-image-dark,
+.contact-form,
+.credits,
+.credits-dark {
+  background-color: rgba(var(--bg-rgb), 0.88);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.section-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}

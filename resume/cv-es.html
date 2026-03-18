@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facundo Serna – CV</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 11pt;
+      line-height: 1.45;
+      color: #000;
+      background: #fff;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 22mm 22mm 28mm 22mm;
+    }
+
+    /* ── Header ── */
+    .header-name {
+      font-size: 22pt;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 4px;
+    }
+
+    .header-contact {
+      text-align: center;
+      font-size: 10pt;
+      margin-bottom: 5px;
+    }
+
+    .header-links {
+      text-align: center;
+      font-size: 10pt;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    /* ── Section titles ── */
+    h2 {
+      font-size: 11pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 2px;
+      margin-top: 13px;
+      margin-bottom: 8px;
+    }
+
+    /* ── Summary ── */
+    .summary p {
+      font-size: 10.5pt;
+      text-align: justify;
+    }
+
+    /* ── Experience entry ── */
+    .entry { margin-bottom: 12px; }
+
+    .entry-role {
+      font-size: 11pt;
+      font-weight: bold;
+    }
+
+    .entry-company {
+      font-size: 10.5pt;
+      font-style: italic;
+    }
+
+    .entry-meta {
+      font-size: 10pt;
+      color: #444;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 4px;
+    }
+
+    li {
+      font-size: 10.5pt;
+      margin-bottom: 3px;
+      text-align: justify;
+    }
+
+    /* ── Education ── */
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-institution { font-weight: bold; font-size: 11pt; }
+    .edu-degree { font-style: italic; font-size: 10.5pt; }
+    .edu-dates { font-size: 10pt; font-style: italic; color: #444; }
+
+    /* ── Skills table ── */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.5pt;
+    }
+
+    .skills-table td {
+      vertical-align: top;
+      padding: 3px 8px 3px 0;
+      width: 50%;
+    }
+
+    .skills-table td:last-child {
+      padding-right: 0;
+    }
+
+    .skill-label {
+      font-weight: bold;
+    }
+
+    /* ── Soft skills & Languages ── */
+    .soft-line, .lang-line {
+      font-size: 10.5pt;
+    }
+
+    /* ── Page breaks ── */
+    h2 { page-break-after: avoid; }
+    .entry { page-break-inside: avoid; }
+
+    .page-break { page-break-before: always; padding-top: 22mm; }
+
+    /* ── Print ── */
+    @media print {
+      body { padding: 22mm 22mm 28mm 22mm; }
+      @page { margin: 0; size: A4; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header-name">Facundo Serna</div>
+  <div class="header-contact">
+    Buenos Aires, Argentina &nbsp;·&nbsp; facuserna96@gmail.com
+  </div>
+  <div class="header-links">
+    linkedin.com/in/FacundoSerna &nbsp;·&nbsp; github.com/FacundoSerna96
+  </div>
+
+  <!-- PERFIL PROFESIONAL -->
+  <h2>Perfil Profesional</h2>
+  <div class="summary">
+    <p>
+      Desarrollador Full-Stack y DevOps Engineer con más de 3 años de experiencia construyendo soluciones enterprise escalables. Especializado en plataformas de gestión de contenido, sistemas BPM, infraestructura cloud e integración de flujos de trabajo con IA. Con experiencia liderando despliegues en AWS EKS para clientes enterprise, gestionando ecosistemas Alfresco, Keycloak y Activiti a escala. Apasionado por la automatización, la arquitectura limpia y el uso de herramientas de IA para generar valor de negocio real.
+    </p>
+  </div>
+
+  <!-- EXPERIENCIA -->
+  <h2>Experiencia Laboral</h2>
+
+  <div class="entry">
+    <div class="entry-role">Full Stack Developer &amp; DevOps Engineer</div>
+    <div class="entry-company">Proficient Enterprises</div>
+    <div class="entry-meta">Agosto 2025 – Actualidad &nbsp;·&nbsp; Cheyenne, Wyoming, USA &nbsp;·&nbsp; Remoto</div>
+    <ul>
+      <li><b>Alfresco Content Services:</b> diseño de modelos de datos, desarrollo de Web Scripts y búsqueda multi-estrategia (Lucene, CMIS, FTS).</li>
+      <li><b>Activiti/APS BPM:</b> diseño e implementación de procesos de negocio, formularios de tareas, automatización de flujos y gestión de variables de proceso.</li>
+      <li><b>Keycloak:</b> federación LDAP, OAuth2/JWT, temas de login personalizados e integración SSO entre servicios.</li>
+      <li><b>Despliegues AWS:</b> CodePipeline, S3, EC2, EKS (Kubernetes + Helm), OpenSearch · Aurora RDS: optimización de queries y creación de índices.</li>
+      <li>Resolución de problemas críticos: bloat en ACT_EVT_LOG (7GB+), tuning de Spring Batch y agotamiento del pool HikariCP.</li>
+      <li>Migraciones de MySQL a PostgreSQL y de Docker a Kubernetes en entornos de producción y prueba.</li>
+      <li><b>Automatización con IA:</b> flujos en n8n con pipelines RAG, embeddings de OpenAI e integración de pgvector.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-role">Full Stack Web Developer</div>
+    <div class="entry-company">ConoSurIT</div>
+    <div class="entry-meta">2022 – 2023 &nbsp;·&nbsp; Córdoba, Argentina</div>
+    <ul>
+      <li>Desarrollo y mantenimiento de aplicaciones web enterprise orientadas a gestión documental y automatización de flujos, con Angular, Node.js y PostgreSQL.</li>
+      <li>Optimización de rendimiento en ~40% mediante refactorización de arquitectura de componentes y lazy loading.</li>
+      <li>Diseño e implementación de backend basado en microservicios, aumentando modularidad y escalabilidad.</li>
+      <li>Coordinación de tareas dentro del equipo, actuando como referente técnico durante los sprints.</li>
+      <li>Creación de APIs REST e integración con Alfresco CMIS para flujos de almacenamiento y recuperación documental.</li>
+    </ul>
+  </div>
+
+  <!-- EDUCACIÓN -->
+  <h2 class="page-break">Educación</h2>
+
+  <div class="entry">
+    <div class="edu-header">
+      <span class="edu-institution">Universidad Nacional de la Patagonia (UNPSJB)</span>
+      <span class="edu-dates">2015 – 2019</span>
+    </div>
+    <div class="edu-degree">Analista Programador Universitario &nbsp;·&nbsp; Título Obtenido</div>
+  </div>
+
+  <!-- HABILIDADES TÉCNICAS -->
+  <h2>Habilidades Técnicas</h2>
+
+  <table class="skills-table">
+    <tr>
+      <td>
+        <span class="skill-label">Frontend:</span><br>
+        Angular 12/16, React.js, Next.js, TypeScript,<br>
+        Redux, Tailwind CSS, Material UI, Bootstrap
+      </td>
+      <td>
+        <span class="skill-label">Backend:</span><br>
+        Node.js, NestJS, Express.js, APIs REST,<br>
+        JWT, Sequelize, Python
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="skill-label">Bases de Datos:</span><br>
+        PostgreSQL, MongoDB, Aurora RDS,<br>
+        pgvector, OpenSearch
+      </td>
+      <td>
+        <span class="skill-label">DevOps y Cloud:</span><br>
+        AWS (EC2, S3, ECS, EKS, Lambda, CodePipeline),<br>
+        Kubernetes, Helm, Docker, CI/CD, GitHub Actions, Linux
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="skill-label">Plataformas Enterprise:</span><br>
+        Alfresco (CMIS, Web Scripts, FTS),<br>
+        Keycloak (OAuth2, LDAP, JWT, SSO), Activiti/APS
+      </td>
+      <td>
+        <span class="skill-label">IA y Automatización:</span><br>
+        LangChain, LangGraph, RAG, Agentes de IA,<br>
+        Prompt Engineering, OpenAI API, n8n, Hugging Face
+      </td>
+    </tr>
+  </table>
+
+  <!-- HABILIDADES BLANDAS -->
+  <h2>Habilidades Blandas</h2>
+  <div class="soft-line">
+    Trabajo en equipo &nbsp;·&nbsp; Comunicación &nbsp;·&nbsp; Adaptabilidad &nbsp;·&nbsp; Resolución de problemas &nbsp;·&nbsp; Autodidacta &nbsp;·&nbsp; Proactividad &nbsp;·&nbsp; Liderazgo técnico
+  </div>
+
+  <!-- IDIOMAS -->
+  <h2>Idiomas</h2>
+  <div class="lang-line">
+    Español — Nativo &nbsp;·&nbsp; Inglés — Intermedio (B1)
+  </div>
+
+</body>
+</html>

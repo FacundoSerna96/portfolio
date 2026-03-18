@@ -3,89 +3,67 @@ import { DataContext } from '../Helpers/Context';
 
 import './styles/SkillsProgressBar.css';
 
-
-
 import reactClaro from '../assets/logos/react-logo-claro.png';
-import nodeClaro from '../assets/logos/node-logo-claro.png';
-
-
 import reactOscuro from '../assets/logos/react-logo-oscuro.png';
+import nodeClaro from '../assets/logos/node-logo-claro.png';
 import nodeOscuro from '../assets/logos/node-logo-oscuro.png';
-
-
-import iconAngular from '../assets/logos/angular-claro.png'
-import iconAngularDark from '../assets/logos/angular-oscuro.png'
-
 import iconAws from '../assets/logos/aws-claro.png'
 import iconAwsDark from '../assets/logos/aws-oscuro.png'
-
 import iconIa from '../assets/logos/ia-claro.png'
 import iconIaDark from '../assets/logos/ia-oscuro.png'
 
-
-
-
 const SkillsProgressBar = () => {
-  const {contextSkin} = useContext(DataContext)
-  const {language} = useContext(DataContext)
+  const { contextSkin, language } = useContext(DataContext)
 
-  let progressBar = contextSkin? 'progressBar progressBar-dark' : 'progressBar'
+  const bar = contextSkin ? 'progressBar progressBar-dark' : 'progressBar'
+  const detail = contextSkin ? 'skill-detail-dark' : 'skill-detail'
 
   return (
     <div className='SkillsProgressBar'>
-      <div className="react icon-skill">
-        <img src={contextSkin? iconAngularDark : iconAngular} alt="" />
-        <div className={progressBar}>
-          <p>Angular (12 y 16)</p>
-          <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
-           TypeScript - RxJs - NgRx
+
+      <div className="icon-skill">
+        <img src={contextSkin ? reactOscuro : reactClaro} alt="" />
+        <div className={bar}>
+          <p>Frontend</p>
+          <div className={detail}>
+            Angular · React · Next.js · TypeScript · Redux · Tailwind · Material UI
           </div>
         </div>
       </div>
-      <div className="node icon-skill">
-        <img src={contextSkin? reactOscuro : reactClaro} alt="" />
-        <div className={progressBar}>
-          <p>React.JS</p>
-          <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
-          Next.js - Redux - Jest
+
+      <div className="icon-skill">
+        <img src={contextSkin ? nodeOscuro : nodeClaro} alt="" />
+        <div className={bar}>
+          <p>Backend</p>
+          <div className={detail}>
+            Node.js · NestJS · Express · PostgreSQL · Sequelize · JWT
           </div>
         </div>
       </div>
-      <div className="js icon-skill">
-        <img src={contextSkin? nodeOscuro : nodeClaro} alt="" />
-        <div className={progressBar}>
-          <p>Node</p>
-          <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
-            Nest.JS - Express - Sequalize - JWT
+
+      <div className="icon-skill">
+        <img src={contextSkin ? iconAwsDark : iconAws} alt="" />
+        <div className={bar}>
+          <p>Cloud & DevOps</p>
+          <div className={detail}>
+            AWS · Docker · Kubernetes · S3 · EC2 · ECS · EKS · Lambda · CI/CD
           </div>
         </div>
       </div>
-      <div className="sql icon-skill">
-        <img src={contextSkin? iconAwsDark : iconAws } alt="" />
-        <div className={progressBar}>
-          <p>AWS</p>
-          <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
-            S3 - EC2 - EKS
-          </div>
-        </div>
-      </div>
-      <div className="mongodb icon-skill">
-        <img src={contextSkin? iconIaDark : iconIa} alt="" />
-        <div className={progressBar}>
-          <p>IA</p>
-          <div className={contextSkin ? "skill-detail-dark" : "skill-detail"}>
-            {
-              language 
-              ?
-                "Integracion con OpenIA Api y ChatBots"
-              :
-                "Integration with OpenAI API and ChatBots"
+
+      <div className="icon-skill">
+        <img src={contextSkin ? iconIaDark : iconIa} alt="" />
+        <div className={bar}>
+          <p>{language ? 'IA' : 'AI'}</p>
+          <div className={detail}>
+            {language
+              ? 'Python · LangGraph · LangChain · RAG · Agentes · Prompt Engineering · Automatización con IA'
+              : 'Python · LangGraph · LangChain · RAG · AI Agents · Prompt Engineering · AI Process Automation'
             }
           </div>
         </div>
       </div>
-      
-      
+
     </div>
   )
 }

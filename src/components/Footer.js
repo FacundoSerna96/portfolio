@@ -15,12 +15,12 @@ function Footer() {
         language
         ?
         <div className={contextSkin? 'credits credits-dark' : 'credits'}>
-        <p>Todos los derechos reservados © 2025</p>
+        <p>Todos los derechos reservados © 2026</p>
         <p>Ilustrado por Carla Quinteros</p>    
       </div>
         :
         <div className={contextSkin? 'credits credits-dark' : 'credits'}>
-        <p>All rights reserved © 2025</p>
+        <p>All rights reserved © 2026</p>
         <p>Illustrated by Carla Quinteros</p>    
       </div>
       }

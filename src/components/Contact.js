@@ -15,8 +15,6 @@ const Contact = () => {
   const [enviado, setEnviado] = useState(false);
   const [error, setError] = useState(false);
 
-  //para mandar email
-  //con la libreria emailjs
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -25,20 +23,14 @@ const Contact = () => {
   };
 
   const verificarDatos = (e) => {
-    if (e.target[0].value === "") {
-      return true;
-    } else if (e.target[1].value === "") {
-      return true;
-    } else if (e.target[2].value === "") {
-      return true;
-    } else {
-      enviarMail(e);
-      return false;
-    }
+    if (e.target[0].value === "") return true;
+    if (e.target[1].value === "") return true;
+    if (e.target[2].value === "") return true;
+    enviarMail(e);
+    return false;
   };
 
   const enviarMail = (e) => {
-    //si todo salio bien se envia el mensaje
     emailjs
       .sendForm(
         "service_7jvwxtc",
@@ -47,31 +39,23 @@ const Contact = () => {
         "q85jz7eaHTaJie90g"
       )
       .then(
-        (result) => {
-          setEnviado((m) => (m = true));
-          console.log("OK");
-        },
-        (error) => {
-          console.log(error.text);
-        }
+        () => setEnviado(true),
+        (error) => console.log(error.text)
       );
   };
 
-  const { contextSkin } = useContext(DataContext);
-  const { language } = useContext(DataContext);
+  const { contextSkin, language } = useContext(DataContext);
 
   const ref = useRef();
   const isVisible = useOnScreen(ref);
 
   return (
     <div className="contact" id="contact">
-      <div
-        className={
-          contextSkin ? "contact-image contact-image-dark" : "contact-image"
-        }
-      >
+      <div className="contact-image">
+        <span className="section-label">
+          {language ? "04 — Hablemos" : "04 — Let's talk"}
+        </span>
         {language ? <h1>Contactame!</h1> : <h1>Contact me!</h1>}
-
         <img src={contextSkin ? PhoneDark : Phone} alt="" className="phone" />
       </div>
 
@@ -100,29 +84,20 @@ const Contact = () => {
             <textarea
               name="message"
               className="suavisado"
-              cols="30"
-              rows="1"
-              placeholder="Escribi tu mensaje"
+              placeholder="Escribí tu mensaje"
             ></textarea>
             <input
-              className="contact-button suavisado"
+              className="contact-button"
               type="submit"
               value="Enviar"
             />
             <div className={enviado ? "enviado" : "displayOff"}>
-              <p className={contextSkin ? "enviado-dark" : "enviado"}>
-                El mensaje fue enviado exitosamente.
-              </p>
+              <p>El mensaje fue enviado exitosamente.</p>
             </div>
-
-            {error ? (
-              <div className={"enviado"}>
-                <p className={contextSkin ? "enviado-dark" : "enviado"}>
-                  Por favor complete todos los datos.
-                </p>
+            {error && (
+              <div className="enviado">
+                <p>Por favor complete todos los datos.</p>
               </div>
-            ) : (
-              ""
             )}
           </form>
         ) : (
@@ -142,29 +117,20 @@ const Contact = () => {
             <textarea
               name="message"
               className="suavisado"
-              cols="30"
-              rows="1"
               placeholder="Type your message"
             ></textarea>
             <input
-              className="contact-button suavisado"
+              className="contact-button"
               type="submit"
               value="Send"
             />
             <div className={enviado ? "enviado" : "displayOff"}>
-              <p className={contextSkin ? "enviado-dark" : "enviado"}>
-                The message was sent successfully.
-              </p>
+              <p>The message was sent successfully.</p>
             </div>
-
-            {error ? (
-              <div className={"enviado"}>
-                <p className={contextSkin ? "enviado-dark" : "enviado"}>
-                  Please fill in all the fields
-                </p>
+            {error && (
+              <div className="enviado">
+                <p>Please fill in all the fields.</p>
               </div>
-            ) : (
-              ""
             )}
           </form>
         )}

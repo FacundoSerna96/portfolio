@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import LogoOscuro from "../assets/logo-oscuro.png";
 import LogoClaro from "../assets/logo-claro.png";
@@ -11,31 +11,27 @@ const Navbar = () => {
   const { language, setLanguage } = useContext(DataContext);
 
   const [menuOn, setMenuOn] = useState(false);
-
   const [skin, setSkin] = useState(false);
   const [textoSkin, setTextoSkin] = useState("Dark Mode");
+  const [scrolled, setScrolled] = useState(false);
 
-  const HandlerMenu = () => {
-    if (menuOn) {
-      setMenuOn(false);
-    } else {
-      setMenuOn(true);
-    }
-  };
+  useEffect(() => {
+    document.body.classList.toggle("dark", contextSkin);
+  }, [contextSkin]);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const HandlerMenu = () => setMenuOn(!menuOn);
 
   const HandlerLanguage = () => {
-    if(!skin){
-      if(language){
-        setTextoSkin((t) => (t = "Dark Mode"));
-      }else{
-        setTextoSkin((t) => (t = "Modo Oscuro"));
-      }
-    }else{
-      if(language){
-        setTextoSkin((t) => (t = "Light Mode"));
-      }else{
-        setTextoSkin((t) => (t = "Modo Claro"));
-      }
+    if (!skin) {
+      setTextoSkin(language ? "Dark Mode" : "Modo Oscuro");
+    } else {
+      setTextoSkin(language ? "Light Mode" : "Modo Claro");
     }
     setLanguage(!language);
   };
@@ -43,43 +39,19 @@ const Navbar = () => {
   const HandlerSkin = () => {
     if (skin) {
       setSkin(false);
-      if(language){
-        setTextoSkin((t) => (t = "Modo Oscuro"));
-      }else{
-        setTextoSkin((t) => (t = "Dark Mode"));
-      }
-
+      setTextoSkin(language ? "Modo Oscuro" : "Dark Mode");
       setContextSkin(false);
     } else {
       setSkin(true);
-      if(language){
-        setTextoSkin((t) => (t = "Modo Claro"));
-      }else{
-        setTextoSkin((t) => (t = "Light Mode"));
-      }
-
+      setTextoSkin(language ? "Modo Claro" : "Light Mode");
       setContextSkin(true);
     }
   };
 
-  const globalStyle = `
-                    body {
-                      background-color : ${contextSkin ? "#1D131D" : "#EAE7DC"};
-                    }
-                    a {
-                      color: ${contextSkin ? "#281D22" : "#EAE7DC"};
-                    }
-          `;
-
   return (
-    <div className="Navbar">
-      {/* Permite cambiar el color a toda la pagina */}
-      <style jsx={"true"} global={"true"}>
-        {globalStyle}
-      </style>
-
+    <div className={`Navbar${scrolled ? " scrolled" : ""}`}>
       <div className="logo">
-        <a href="#/" className="">
+        <a href="#/">
           <img
             src={contextSkin ? LogoClaro : LogoOscuro}
             alt=""
@@ -102,61 +74,32 @@ const Navbar = () => {
       </div>
 
       <nav className={menuOn ? "navOn" : "nav"}>
-        {language ? (
-          <div className={contextSkin ? "enlaces enlaces-dark" : "enlaces"}>
-            <li>
-              <div className="square"></div>
-              <a href="#about">Sobre mi</a>
-            </li>
-            <li>
-              <div className="square"></div>
-              <a href="#skills">Habilidades</a>
-            </li>
-            <li>
-              <div className="square"></div>
-              <a href="#experience">Experiencia</a>
-            </li>
-            <li>
-              <div className="square"></div>
-              <a href="#contact">Contacto</a>
-            </li>
-          </div>
-        ) : (
-          <div className={contextSkin ? "enlaces enlaces-dark" : "enlaces"}>
-            <li>
-              <div className="square"></div>
-              <a href="#about">About me</a>
-            </li>
-            <li>
-              <div className="square"></div>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
-              <div className="square"></div>
-              <a href="#experience">Experience</a>
-            </li>
-            <li>
-              <div className="square"></div>
-              <a href="#contact">Contact</a>
-            </li>
-          </div>
-        )}
+        <div className="enlaces">
+          <li>
+            <a href="#about">{language ? "Sobre mi" : "About me"}</a>
+          </li>
+          <li>
+            <a href="#skills">{language ? "Habilidades" : "Skills"}</a>
+          </li>
+          <li>
+            <a href="#experience">{language ? "Experiencia" : "Experience"}</a>
+          </li>
+          <li>
+            <a href="#contact">{language ? "Contacto" : "Contact"}</a>
+          </li>
+        </div>
 
-        <div
-          className={contextSkin ? "language-dark" : "language"}
-          onClick={HandlerLanguage}
-        >
+        <div className="language" onClick={HandlerLanguage}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
+            width="18"
+            height="18"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-languages "
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path d="m5 8 6 6"></path>
             <path d="m4 14 6-6 2-3"></path>
@@ -170,19 +113,13 @@ const Navbar = () => {
 
         <div className="skinButton">
           <button
-            className={
-              skin
-                ? "button-skin button-skin-dark"
-                : "button-skin button-skin-light"
-            }
+            className={skin ? "button-skin button-skin-dark" : "button-skin button-skin-light"}
             onClick={HandlerSkin}
           >
             <div className="text-skin">{textoSkin}</div>
             <svg
               aria-hidden="true"
               focusable="false"
-              data-prefix="fas"
-              data-icon="adjust"
               className="eclipse rotate"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
