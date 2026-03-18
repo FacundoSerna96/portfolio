@@ -18,7 +18,8 @@
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --print-to-pdf=\"src/assets/CV.pdf\" --no-pdf-header-footer \"resume/cv-es.html\")",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --print-to-pdf=\"src/assets/Resume.pdf\" --no-pdf-header-footer \"resume/resume-en.html\")",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --print-to-pdf=\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\portfolio\\\\src\\\\assets\\\\CV.pdf\" --no-pdf-header-footer \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\portfolio\\\\resume\\\\cv-es.html\")",
-      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --print-to-pdf=\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\portfolio\\\\src\\\\assets\\\\Resume.pdf\" --no-pdf-header-footer \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\portfolio\\\\resume\\\\resume-en.html\")"
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --print-to-pdf=\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\portfolio\\\\src\\\\assets\\\\Resume.pdf\" --no-pdf-header-footer \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\portfolio\\\\resume\\\\resume-en.html\")",
+      "Bash(npm run:*)"
     ]
   }
 }
