@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import Navbar from './Navbar';
 import Hero from './Hero';
 import About from './About';
@@ -9,14 +10,18 @@ import Contact from './Contact';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 import NetworkCanvas from './NetworkCanvas';
+import LoadingScreen from './LoadingScreen';
 
 import './styles/App.css';
 import DataProvider from '../Helpers/Context';
 
 
 const App = () => {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <DataProvider>
+      {!loaded && <LoadingScreen onComplete={() => setLoaded(true)} />}
       {/* Fixed background canvas */}
       <NetworkCanvas />
 

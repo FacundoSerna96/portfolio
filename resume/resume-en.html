@@ -101,21 +101,12 @@
     .edu-degree { font-style: italic; font-size: 10.5pt; }
     .edu-dates { font-size: 10pt; font-style: italic; color: #444; }
 
-    /* ── Skills table ── */
-    .skills-table {
-      width: 100%;
-      border-collapse: collapse;
+    /* ── Skills list ── */
+    .skills-list {
       font-size: 10.5pt;
-    }
-
-    .skills-table td {
-      vertical-align: top;
-      padding: 3px 8px 3px 0;
-      width: 50%;
-    }
-
-    .skills-table td:last-child {
-      padding-right: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
 
     .skill-label {
@@ -204,44 +195,14 @@
   <!-- TECHNICAL SKILLS -->
   <h2>Technical Skills</h2>
 
-  <table class="skills-table">
-    <tr>
-      <td>
-        <span class="skill-label">Frontend:</span><br>
-        Angular 12/16, React.js, Next.js, TypeScript,<br>
-        Redux, Tailwind CSS, Material UI, Bootstrap
-      </td>
-      <td>
-        <span class="skill-label">Backend:</span><br>
-        Node.js, NestJS, Express.js, REST APIs,<br>
-        JWT, Sequelize, Python
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="skill-label">Databases:</span><br>
-        PostgreSQL, MongoDB, Aurora RDS,<br>
-        pgvector, OpenSearch
-      </td>
-      <td>
-        <span class="skill-label">DevOps &amp; Cloud:</span><br>
-        AWS (EC2, S3, ECS, EKS, Lambda, CodePipeline),<br>
-        Kubernetes, Helm, Docker, CI/CD, GitHub Actions, Linux
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="skill-label">Enterprise Platforms:</span><br>
-        Alfresco (CMIS, Web Scripts, FTS),<br>
-        Keycloak (OAuth2, LDAP, JWT, SSO), Activiti/APS
-      </td>
-      <td>
-        <span class="skill-label">AI &amp; Automation:</span><br>
-        LangChain, LangGraph, RAG, AI Agents,<br>
-        Prompt Engineering, OpenAI API, n8n, Hugging Face
-      </td>
-    </tr>
-  </table>
+  <div class="skills-list">
+    <div><span class="skill-label">Frontend:</span> Angular 12/16, React.js, Next.js, TypeScript, Redux, Tailwind CSS, Material UI, Bootstrap</div>
+    <div><span class="skill-label">Backend:</span> Node.js, NestJS, Express.js, REST APIs, JWT, Sequelize, Python</div>
+    <div><span class="skill-label">Databases:</span> PostgreSQL, MongoDB, Aurora RDS, pgvector, OpenSearch</div>
+    <div><span class="skill-label">DevOps &amp; Cloud:</span> AWS (EC2, S3, ECS, EKS, Lambda), Kubernetes, Helm, Docker, CI/CD, GitHub Actions, Linux</div>
+    <div><span class="skill-label">Enterprise Platforms:</span> Alfresco (CMIS, Web Scripts, FTS), Keycloak (OAuth2, LDAP, JWT, SSO), Activiti/APS</div>
+    <div><span class="skill-label">AI &amp; Automation:</span> LangChain, LangGraph, RAG, AI Agents, Prompt Engineering, OpenAI API, n8n, Hugging Face</div>
+  </div>
 
   <!-- SOFT SKILLS -->
   <h2>Soft Skills</h2>

@@ -14,23 +14,24 @@ import useOnScreen from "../Hooks/useOnScreen";
 const Contact = () => {
   const [enviado, setEnviado] = useState(false);
   const [error, setError] = useState(false);
+  const [sendError, setSendError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setError(verificarDatos(e));
-  };
-
-  const verificarDatos = (e) => {
-    if (e.target[0].value === "") return true;
-    if (e.target[1].value === "") return true;
-    if (e.target[2].value === "") return true;
+    setSendError(false);
+    if (e.target[0].value === "" || e.target[1].value === "" || e.target[2].value === "") {
+      setError(true);
+      return;
+    }
+    setError(false);
     enviarMail(e);
-    return false;
   };
 
   const enviarMail = (e) => {
+    setLoading(true);
     emailjs
       .sendForm(
         "service_7jvwxtc",
@@ -39,8 +40,14 @@ const Contact = () => {
         "q85jz7eaHTaJie90g"
       )
       .then(
-        () => setEnviado(true),
-        (error) => console.log(error.text)
+        () => {
+          setLoading(false);
+          setEnviado(true);
+        },
+        () => {
+          setLoading(false);
+          setSendError(true);
+        }
       );
   };
 
@@ -48,6 +55,10 @@ const Contact = () => {
 
   const ref = useRef();
   const isVisible = useOnScreen(ref);
+
+  const submitLabel = loading
+    ? null
+    : language ? "Enviar" : "Send";
 
   return (
     <div className="contact" id="contact">
@@ -67,73 +78,56 @@ const Contact = () => {
             : "displayHidden"
         }
       >
-        {language ? (
-          <form ref={form} onSubmit={sendEmail}>
-            <input
-              type="text"
-              name="from_name"
-              className="suavisado"
-              placeholder="Nombre"
-            />
-            <input
-              type="email"
-              name="from_email"
-              className="suavisado"
-              placeholder="Email"
-            />
-            <textarea
-              name="message"
-              className="suavisado"
-              placeholder="Escribí tu mensaje"
-            ></textarea>
-            <input
-              className="contact-button"
-              type="submit"
-              value="Enviar"
-            />
-            <div className={enviado ? "enviado" : "displayOff"}>
-              <p>El mensaje fue enviado exitosamente.</p>
-            </div>
-            {error && (
-              <div className="enviado">
-                <p>Por favor complete todos los datos.</p>
-              </div>
+        <form ref={form} onSubmit={sendEmail}>
+          <input
+            type="text"
+            name="from_name"
+            className="suavisado"
+            placeholder={language ? "Nombre" : "Name"}
+          />
+          <input
+            type="email"
+            name="from_email"
+            className="suavisado"
+            placeholder="Email"
+          />
+          <textarea
+            name="message"
+            className="suavisado"
+            placeholder={language ? "Escribí tu mensaje" : "Type your message"}
+          ></textarea>
+
+          <button
+            className="contact-button"
+            type="submit"
+            disabled={loading}
+          >
+            {loading ? (
+              <span className="contact-spinner" />
+            ) : (
+              submitLabel
             )}
-          </form>
-        ) : (
-          <form ref={form} onSubmit={sendEmail}>
-            <input
-              type="text"
-              name="from_name"
-              className="suavisado"
-              placeholder="Name"
-            />
-            <input
-              type="email"
-              name="from_email"
-              className="suavisado"
-              placeholder="Email"
-            />
-            <textarea
-              name="message"
-              className="suavisado"
-              placeholder="Type your message"
-            ></textarea>
-            <input
-              className="contact-button"
-              type="submit"
-              value="Send"
-            />
-            <div className={enviado ? "enviado" : "displayOff"}>
-              <p>The message was sent successfully.</p>
+          </button>
+
+          {enviado && (
+            <div className="contact-feedback contact-feedback--success">
+              <span className="contact-feedback-dot" />
+              {language ? "Mensaje enviado exitosamente." : "Message sent successfully."}
             </div>
-            {error && (
-              <div className="enviado">
-                <p>Please fill in all the fields.</p>
-              </div>
-            )}
-          </form>
-        )}
+          )}
+          {error && (
+            <div className="contact-feedback contact-feedback--warn">
+              <span className="contact-feedback-dot" />
+              {language ? "Por favor completá todos los campos." : "Please fill in all the fields."}
+            </div>
+          )}
+          {sendError && (
+            <div className="contact-feedback contact-feedback--error">
+              <span className="contact-feedback-dot" />
+              {language ? "Hubo un error al enviar. Intentá de nuevo." : "Something went wrong. Please try again."}
+            </div>
+          )}
+        </form>
       </div>
     </div>
   );
