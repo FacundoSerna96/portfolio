@@ -66,6 +66,29 @@ const SkillsIcons = () => {
 
       <div className="soft-skills">
         <p className="soft-skills-label">
+          {language ? 'Herramientas & Tecnologías' : 'Tools & Technologies'}
+        </p>
+        <div className="soft-skills-tags">
+          {[
+            'Cursor',
+            'GitHub Copilot',
+            'Claude',
+            'Codex',
+            'N8N',
+            'MCPs',
+            'AI-driven development',
+            'Figma',
+            'Notion',
+            'Jira',
+            'VS Code',
+          ].map((tool) => (
+            <span key={tool} className="soft-tag">{tool}</span>
+          ))}
+        </div>
+      </div>
+
+      <div className="soft-skills">
+        <p className="soft-skills-label">
           {language ? 'Habilidades blandas' : 'Soft Skills'}
         </p>
         <div className="soft-skills-tags">
