@@ -1,0 +1,213 @@
+#contact {
+  scroll-margin-top: var(--nav-height);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  padding: 100px 8vw;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* ─── Image side ─────────────────────────────────── */
+
+.contact-image,
+.contact-image-dark {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.contact-image h1,
+.contact-image-dark h1 {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 4vw, 44px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent);
+  letter-spacing: -0.01em;
+}
+
+.phone {
+  height: auto;
+  width: 100%;
+  max-width: 200px;
+  opacity: 0.88;
+  margin-top: 16px;
+  align-self: center;
+}
+
+/* ─── Form ───────────────────────────────────────── */
+
+.contact-form {
+  width: 100%;
+}
+
+.contact .contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 420px;
+}
+
+.suavisado {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text);
+  padding: 14px 2px;
+  transition: border-color 0.2s ease;
+  outline: none;
+  width: 100%;
+  margin-top: 0;
+}
+
+.suavisado::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.suavisado:focus {
+  border-bottom-color: var(--accent);
+  color: var(--text);
+}
+
+input, select, textarea {
+  font-weight: 400;
+}
+
+textarea.suavisado {
+  height: 120px;
+  resize: none;
+  border-radius: 0;
+  padding-top: 14px;
+}
+
+.contact-button {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  height: auto;
+  width: auto;
+  margin-top: 20px;
+}
+
+.contact-button:hover:not(:disabled) {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+.contact-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Spinner ────────────────────────────────────── */
+
+.contact-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid var(--accent);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: contact-spin 0.7s linear infinite;
+}
+
+@keyframes contact-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── Feedback messages ──────────────────────────── */
+
+.contact-feedback {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.contact-feedback-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.contact-feedback--success { color: #4caf82; }
+.contact-feedback--success .contact-feedback-dot { background-color: #4caf82; }
+
+.contact-feedback--warn { color: var(--text-muted); }
+.contact-feedback--warn .contact-feedback-dot { background-color: var(--text-muted); }
+
+.contact-feedback--error { color: var(--accent); }
+.contact-feedback--error .contact-feedback-dot { background-color: var(--accent); }
+
+.enviado {
+  display: inline;
+  color: var(--text);
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.enviado-dark {
+  color: var(--text);
+}
+
+.displayOff {
+  display: none;
+}
+
+.displayHidden {
+  visibility: hidden;
+}
+
+
+/* ─── Responsive ─────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .contact {
+    grid-template-columns: 1fr;
+    padding: 80px 6vw;
+    gap: 40px;
+  }
+
+  .contact-image,
+  .contact-image-dark {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact .contact-form form {
+    max-width: 100%;
+  }
+
+  .contact-button {
+    width: 100%;
+    text-align: center;
+  }
+}

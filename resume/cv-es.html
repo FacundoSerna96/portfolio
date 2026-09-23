@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facundo Serna – CV</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 11pt;
+      line-height: 1.45;
+      color: #000;
+      background: #fff;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 22mm 22mm 28mm 22mm;
+    }
+
+    /* ── Header ── */
+    .header-name {
+      font-size: 22pt;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 4px;
+    }
+
+    .header-title {
+      text-align: center;
+      font-size: 11.5pt;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .header-contact {
+      text-align: center;
+      font-size: 10pt;
+      margin-bottom: 5px;
+    }
+
+    .header-links {
+      text-align: center;
+      font-size: 10pt;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    /* ── Section titles ── */
+    h2 {
+      font-size: 11pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 2px;
+      margin-top: 13px;
+      margin-bottom: 8px;
+    }
+
+    /* ── Summary ── */
+    .summary p {
+      font-size: 10.5pt;
+      text-align: justify;
+    }
+
+    /* ── Experience entry ── */
+    .entry { margin-bottom: 12px; }
+
+    .entry-role {
+      font-size: 11pt;
+      font-weight: bold;
+    }
+
+    .entry-company {
+      font-size: 10.5pt;
+      font-style: italic;
+    }
+
+    .entry-meta {
+      font-size: 10pt;
+      color: #444;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 4px;
+    }
+
+    li {
+      font-size: 10.5pt;
+      margin-bottom: 3px;
+      text-align: justify;
+    }
+
+    /* ── Education ── */
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-institution { font-weight: bold; font-size: 11pt; }
+    .edu-degree { font-style: italic; font-size: 10.5pt; }
+    .edu-dates { font-size: 10pt; font-style: italic; color: #444; }
+
+    /* ── Skills list ── */
+    .skills-list {
+      font-size: 10.5pt;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .skill-label {
+      font-weight: bold;
+    }
+
+    /* ── Languages ── */
+    .lang-line {
+      font-size: 10.5pt;
+    }
+
+    /* ── Page breaks ── */
+    h2 { page-break-after: avoid; }
+    .entry { page-break-inside: avoid; }
+
+    .page-break { page-break-before: always; padding-top: 22mm; }
+
+    /* ── Print ── */
+    @media print {
+      body { padding: 22mm 22mm 28mm 22mm; }
+      @page { margin: 0; size: A4; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header-name">Facundo Serna</div>
+  <div class="header-title">Full Stack Developer | TypeScript &middot; Node.js &middot; React &middot; AWS</div>
+  <div class="header-contact">
+    Ciudad Autónoma de Buenos Aires (CABA), Argentina &nbsp;·&nbsp; facuserna96@gmail.com
+  </div>
+  <div class="header-links">
+    linkedin.com/in/FacundoSerna &nbsp;·&nbsp; github.com/FacundoSerna96
+  </div>
+
+  <!-- PERFIL PROFESIONAL -->
+  <h2>Perfil Profesional</h2>
+  <div class="summary">
+    <p>
+      Full Stack Developer con casi 4 años de experiencia construyendo aplicaciones web enterprise, APIs REST, sistemas de workflow y soluciones cloud. Experiencia práctica con TypeScript, React, Angular, Node.js, NestJS, PostgreSQL y AWS, incluyendo despliegues en Kubernetes/EKS, migraciones de bases de datos en producción y plataformas enterprise como Alfresco, Keycloak y Activiti/APS. Experiencia práctica integrando capacidades de IA —RAG, APIs de LLMs, búsqueda semántica y agentes de IA— en aplicaciones de negocio.
+    </p>
+  </div>
+
+  <!-- EXPERIENCIA -->
+  <h2>Experiencia Laboral</h2>
+
+  <div class="entry">
+    <div class="entry-role">Full Stack Web Developer</div>
+    <div class="entry-company">Proficient Enterprises</div>
+    <div class="entry-meta">Agosto 2025 – Actualidad &nbsp;·&nbsp; Cheyenne, Wyoming, USA &nbsp;·&nbsp; Remoto</div>
+    <ul>
+      <li>Desarrollo de portales y dashboards internos con React y TypeScript, y construcción de APIs REST en Node.js/NestJS y Python para integrar Alfresco, Activiti, Keycloak y servicios de AWS.</li>
+      <li>Diseño de modelos de contenido personalizados, Web Scripts y búsqueda multi-estrategia (Lucene, CMIS, FTS) en Alfresco Content Services para cubrir requerimientos de gestión documental enterprise.</li>
+      <li>Desarrollo de soluciones BPM sobre Activiti/APS, incluyendo diseño de procesos de negocio, formularios de tareas, automatización de aprobaciones y gestión de variables de proceso para flujos enterprise.</li>
+      <li>Diagnóstico y resolución de un incidente crítico de crecimiento en ACT_EVT_LOG (7GB+), ajustando jobs de Spring Batch y la configuración del pool de HikariCP para restablecer el rendimiento de la base de datos en producción.</li>
+      <li>Implementación de gestión de identidades con Keycloak, integrando federación LDAP, flujos OAuth2/JWT, temas de login personalizados y SSO entre servicios.</li>
+      <li>Administración de infraestructura AWS (S3, EC2, EKS con Kubernetes y Helm, OpenSearch) y optimización de queries en Aurora RDS para cargas de trabajo enterprise.</li>
+      <li>Liderazgo de migraciones en producción de MySQL a PostgreSQL y de Docker Compose a Kubernetes.</li>
+      <li>Diseño de agentes de IA y pipelines RAG con LangChain y LangGraph, utilizando embeddings de OpenAI y pgvector para búsqueda semántica, y orquestación de flujos de automatización con n8n.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-role">Full Stack Web Developer</div>
+    <div class="entry-company">ConoSurIT</div>
+    <div class="entry-meta">Octubre 2022 – Agosto 2025 &nbsp;·&nbsp; Córdoba, Argentina &nbsp;·&nbsp; Remoto</div>
+    <ul>
+      <li>Desarrollo y mantenimiento de aplicaciones web enterprise para gestión documental y automatización de flujos, utilizando Angular, Node.js y PostgreSQL.</li>
+      <li>Mejora del rendimiento de la aplicación en ~40% mediante refactorización de la arquitectura de componentes e introducción de estrategias de lazy loading.</li>
+      <li>Migración de un backend monolítico a una arquitectura de microservicios, aumentando la modularidad y escalabilidad del sistema.</li>
+      <li>Construcción de APIs REST e integración con Alfresco CMIS para flujos de almacenamiento y recuperación documental.</li>
+      <li>Referente técnico para el equipo de desarrollo, coordinando tareas y revisando decisiones de implementación durante los sprints.</li>
+    </ul>
+  </div>
+
+  <!-- EDUCACIÓN -->
+  <h2>Educación</h2>
+
+  <div class="entry">
+    <div class="edu-header">
+      <span class="edu-institution">Universidad Nacional de la Patagonia (UNPSJB)</span>
+      <span class="edu-dates">2015 – 2019</span>
+    </div>
+    <div class="edu-degree">Analista Programador Universitario &nbsp;·&nbsp; Título Obtenido</div>
+  </div>
+
+  <!-- HABILIDADES TÉCNICAS -->
+  <h2>Habilidades Técnicas</h2>
+
+  <div class="skills-list">
+    <div><span class="skill-label">Frontend:</span> TypeScript, React, Next.js, Angular</div>
+    <div><span class="skill-label">Backend:</span> Node.js, NestJS, Express.js, APIs REST, Python</div>
+    <div><span class="skill-label">Bases de Datos:</span> PostgreSQL, MongoDB, Aurora RDS, pgvector, OpenSearch</div>
+    <div><span class="skill-label">Cloud y DevOps:</span> AWS, EKS, Kubernetes, Docker, Helm, CI/CD, GitHub Actions, Linux</div>
+    <div><span class="skill-label">Enterprise:</span> Alfresco, Keycloak, Activiti/APS</div>
+    <div><span class="skill-label">IA y Automatización:</span> OpenAI API, RAG, LangChain, LangGraph, Agentes de IA, n8n</div>
+  </div>
+
+  <!-- IDIOMAS -->
+  <h2>Idiomas</h2>
+  <div class="lang-line">
+    Español — Nativo &nbsp;·&nbsp; Inglés — Intermedio (B1)
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facundo Serna – CV</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --red: #A6332C;
+      --dark: #1E1E1E;
+      --gray: #4A4A4A;
+      --light-gray: #E9E9E9;
+    }
+
+    html, body {
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      color: #222;
+      background: #fff;
+    }
+
+    body {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      display: flex;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      width: 72mm;
+      min-height: 297mm;
+      background: var(--dark);
+      color: #fff;
+      padding: 0 0 10mm 0;
+      flex-shrink: 0;
+    }
+
+    .photo-wrap {
+      width: 100%;
+      line-height: 0;
+    }
+
+    .photo {
+      width: 72mm;
+      height: 72mm;
+      object-fit: cover;
+      display: block;
+    }
+
+    .sidebar-section {
+      padding: 6mm 8mm 0 8mm;
+    }
+
+    .sidebar-section:first-of-type {
+      padding-top: 7mm;
+    }
+
+    .sidebar-title {
+      font-size: 9.5pt;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 3mm;
+      padding-bottom: 1.5mm;
+      border-bottom: 1.5px solid var(--red);
+    }
+
+    .sidebar-text {
+      font-size: 8.8pt;
+      line-height: 1.5;
+      color: #d8d8d8;
+      margin-bottom: 2mm;
+    }
+
+    .contact-item {
+      font-size: 8.6pt;
+      line-height: 1.6;
+      color: #d8d8d8;
+      word-break: break-word;
+    }
+
+    .contact-label {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .skill-group {
+      margin-bottom: 2.2mm;
+    }
+
+    .skill-group-title {
+      font-size: 8.6pt;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5mm;
+    }
+
+    .skill-group-items {
+      font-size: 8.3pt;
+      color: #d8d8d8;
+      line-height: 1.45;
+    }
+
+    /* ── MAIN ── */
+    .main {
+      width: 138mm;
+      min-height: 297mm;
+    }
+
+    .header-band {
+      background: var(--red);
+      color: #fff;
+      padding: 12mm 10mm 8mm 10mm;
+    }
+
+    .name {
+      font-size: 21pt;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .tagline {
+      font-size: 10pt;
+      font-style: italic;
+      margin-top: 2mm;
+      color: #f4e4e2;
+    }
+
+    .main-content {
+      padding: 7mm 10mm 10mm 10mm;
+    }
+
+    .main-section {
+      margin-bottom: 6mm;
+    }
+
+    .main-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 3mm;
+      padding-bottom: 1.2mm;
+      border-bottom: 1.5px solid var(--red);
+    }
+
+    .summary-text {
+      font-size: 9.3pt;
+      line-height: 1.5;
+      color: #333;
+      text-align: justify;
+    }
+
+    .job {
+      margin-bottom: 4.5mm;
+    }
+
+    .job:last-child { margin-bottom: 0; }
+
+    .job-role {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .job-company {
+      font-size: 9.3pt;
+      font-style: italic;
+      color: var(--gray);
+    }
+
+    .job-meta {
+      font-size: 8.3pt;
+      color: #888;
+      margin-bottom: 1.5mm;
+    }
+
+    .job ul {
+      padding-left: 4mm;
+      margin: 0;
+    }
+
+    .job li {
+      font-size: 8.8pt;
+      line-height: 1.45;
+      color: #333;
+      margin-bottom: 1mm;
+      text-align: justify;
+    }
+
+    .edu-institution {
+      font-size: 9.8pt;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .edu-degree {
+      font-size: 9pt;
+      font-style: italic;
+      color: var(--gray);
+    }
+
+    .edu-dates {
+      font-size: 8.3pt;
+      color: #888;
+    }
+
+    @media print {
+      body { width: 210mm; }
+      @page { margin: 0; size: A4; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="photo-wrap">
+      <img class="photo" src="../src/assets/photos/profile-circle.jpg" alt="Facundo Serna" />
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Sobre M&iacute;</div>
+      <div class="sidebar-text">
+        Full Stack Developer con casi 4 a&ntilde;os de experiencia construyendo aplicaciones enterprise, APIs y soluciones cloud. Experiencia con TypeScript, React, Node.js y AWS/Kubernetes, adem&aacute;s de integraci&oacute;n pr&aacute;ctica de IA (RAG, LLMs, agentes) en productos reales.
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Contacto</div>
+      <div class="contact-item"><span class="contact-label">Email:</span> facuserna96@gmail.com</div>
+      <div class="contact-item"><span class="contact-label">LinkedIn:</span> linkedin.com/in/FacundoSerna</div>
+      <div class="contact-item"><span class="contact-label">GitHub:</span> github.com/FacundoSerna96</div>
+      <div class="contact-item"><span class="contact-label">Ubicaci&oacute;n:</span> Ciudad Aut&oacute;noma de Buenos Aires (CABA), Argentina</div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Habilidades T&eacute;cnicas</div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Frontend</div>
+        <div class="skill-group-items">TypeScript, React, Next.js, Angular</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Backend</div>
+        <div class="skill-group-items">Node.js, NestJS, Express.js, Python</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Bases de Datos</div>
+        <div class="skill-group-items">PostgreSQL, MongoDB, Aurora RDS, OpenSearch</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Cloud &amp; DevOps</div>
+        <div class="skill-group-items">AWS, EKS, Kubernetes, Docker, Helm, CI/CD</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Enterprise</div>
+        <div class="skill-group-items">Alfresco, Keycloak, Activiti/APS</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">IA &amp; Automatizaci&oacute;n</div>
+        <div class="skill-group-items">OpenAI API, RAG, LangChain, LangGraph, n8n</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Idiomas</div>
+      <div class="sidebar-text">Espa&ntilde;ol &mdash; Nativo<br />Ingl&eacute;s &mdash; Intermedio (B1)</div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="header-band">
+      <div class="name">FACUNDO SERNA</div>
+      <div class="tagline">Full Stack Developer | TypeScript &middot; Node.js &middot; React &middot; AWS</div>
+    </div>
+
+    <div class="main-content">
+
+      <div class="main-section">
+        <div class="main-title">Experiencia Laboral</div>
+
+        <div class="job">
+          <div class="job-role">Full Stack Web Developer</div>
+          <div class="job-company">Proficient Enterprises</div>
+          <div class="job-meta">Agosto 2025 &ndash; Actualidad &nbsp;&middot;&nbsp; Cheyenne, Wyoming, USA &nbsp;&middot;&nbsp; Remoto</div>
+          <ul>
+            <li>Desarrollo de portales internos con React y TypeScript, y APIs REST en Node.js/NestJS y Python.</li>
+            <li>Alfresco Content Services, BPM en Activiti/APS y gesti&oacute;n de identidades con Keycloak (SSO, LDAP, OAuth2/JWT).</li>
+            <li>Diagn&oacute;stico y resoluci&oacute;n de un incidente cr&iacute;tico en ACT_EVT_LOG (7GB+), ajustando Spring Batch y HikariCP.</li>
+            <li>Infraestructura AWS (EKS, Kubernetes, Helm, Aurora RDS) y migraciones MySQL&rarr;PostgreSQL, Docker&rarr;Kubernetes.</li>
+            <li>Dise&ntilde;o de agentes de IA y pipelines RAG con LangChain/LangGraph, OpenAI y pgvector; automatizaci&oacute;n con n8n.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-role">Full Stack Web Developer</div>
+          <div class="job-company">ConoSurIT</div>
+          <div class="job-meta">Octubre 2022 &ndash; Agosto 2025 &nbsp;&middot;&nbsp; C&oacute;rdoba, Argentina &nbsp;&middot;&nbsp; Remoto</div>
+          <ul>
+            <li>Desarrollo de aplicaciones enterprise para gesti&oacute;n documental con Angular, Node.js y PostgreSQL.</li>
+            <li>Mejora del rendimiento de la aplicaci&oacute;n en ~40% mediante refactorizaci&oacute;n de arquitectura y lazy loading.</li>
+            <li>Migraci&oacute;n de un backend monol&iacute;tico a microservicios; APIs REST e integraci&oacute;n con Alfresco CMIS.</li>
+            <li>Referente t&eacute;cnico del equipo, coordinando tareas y revisando decisiones durante los sprints.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main-section">
+        <div class="main-title">Educaci&oacute;n</div>
+        <div class="edu-institution">Universidad Nacional de la Patagonia (UNPSJB)</div>
+        <div class="edu-degree">Analista Programador Universitario</div>
+        <div class="edu-dates">2015 &ndash; 2019 &middot; T&iacute;tulo Obtenido</div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

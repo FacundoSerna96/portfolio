@@ -1,0 +1,19 @@
+.experience{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    margin-top: 100px;
+}
+
+.experience .title{
+    text-align: center;
+    color: #641411;
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 100px;
+}
+
+.experience-dark .title{
+    color: #C61A27;
+}
