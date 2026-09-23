@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.9f47fa20.css",
-    "main.js": "/portfolio/static/js/main.1c028ef8.js",
+    "main.js": "/portfolio/static/js/main.32f2074f.js",
     "static/media/Cv con foto .pdf": "/portfolio/static/media/Cv con foto .00ea7c1bea0c55dece6a.pdf",
     "static/media/humo-cafe-comprimido.gif": "/portfolio/static/media/humo-cafe-comprimido.82289c33fd8a31d792b7.gif",
     "static/media/profile.jpeg": "/portfolio/static/media/profile.c44700f2a73a6762a91b.jpeg",
@@ -12,14 +12,14 @@
     "static/media/telefono-oscuro.png": "/portfolio/static/media/telefono-oscuro.3101df296b8241057624.png",
     "static/media/desktop-claro.png": "/portfolio/static/media/desktop-claro.0e8de057a7b0bc3aa4b8.png",
     "static/media/desktop-oscuro.png": "/portfolio/static/media/desktop-oscuro.318ae724b73ba51d8ab6.png",
-    "static/media/CV.pdf": "/portfolio/static/media/CV.ff0fe8c1e5ced2ee55bf.pdf",
-    "static/media/Resume.pdf": "/portfolio/static/media/Resume.127edb72c2677863b2a0.pdf",
+    "static/media/CV.pdf": "/portfolio/static/media/CV.55426dd51f12fd81569a.pdf",
+    "static/media/Resume.pdf": "/portfolio/static/media/Resume.523e481edf75e97de54d.pdf",
     "index.html": "/portfolio/index.html",
     "main.9f47fa20.css.map": "/portfolio/static/css/main.9f47fa20.css.map",
-    "main.1c028ef8.js.map": "/portfolio/static/js/main.1c028ef8.js.map"
+    "main.32f2074f.js.map": "/portfolio/static/js/main.32f2074f.js.map"
   },
   "entrypoints": [
     "static/css/main.9f47fa20.css",
-    "static/js/main.1c028ef8.js"
+    "static/js/main.32f2074f.js"
   ]
 }
