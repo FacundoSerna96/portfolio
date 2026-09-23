@@ -28,6 +28,13 @@
       margin-bottom: 4px;
     }
 
+    .header-title {
+      text-align: center;
+      font-size: 11.5pt;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
     .header-contact {
       text-align: center;
       font-size: 10pt;
@@ -113,8 +120,8 @@
       font-weight: bold;
     }
 
-    /* ── Soft skills & Languages ── */
-    .soft-line, .lang-line {
+    /* ── Languages ── */
+    .lang-line {
       font-size: 10.5pt;
     }
 
@@ -135,8 +142,9 @@
 
   <!-- HEADER -->
   <div class="header-name">Facundo Serna</div>
+  <div class="header-title">Full Stack Developer | TypeScript &middot; Node.js &middot; React &middot; AWS</div>
   <div class="header-contact">
-    Buenos Aires, Argentina &nbsp;·&nbsp; facuserna96@gmail.com
+    Buenos Aires (CABA), Argentina &nbsp;·&nbsp; facuserna96@gmail.com
   </div>
   <div class="header-links">
     linkedin.com/in/FacundoSerna &nbsp;·&nbsp; github.com/FacundoSerna96
@@ -146,7 +154,7 @@
   <h2>Professional Summary</h2>
   <div class="summary">
     <p>
-      Full-Stack Developer &amp; DevOps Engineer with 3+ years of experience building scalable enterprise solutions. Specialized in content management platforms, BPM systems, cloud infrastructure, and AI workflow integration. Experienced leading infrastructure deployments on AWS EKS for enterprise clients, managing Alfresco, Keycloak, and Activiti ecosystems at scale. Passionate about automation, clean architecture, and leveraging AI tools to deliver real business value.
+      Full Stack Developer with nearly 4 years of experience building enterprise web applications, REST APIs, workflow systems, and cloud-based solutions. Hands-on experience with TypeScript, React, Angular, Node.js, NestJS, PostgreSQL, and AWS, including Kubernetes/EKS deployments, production database migrations, and enterprise platforms such as Alfresco, Keycloak, and Activiti/APS. Practical experience integrating AI capabilities — RAG, LLM APIs, semantic search, and AI agents — into business applications.
     </p>
   </div>
 
@@ -154,35 +162,36 @@
   <h2>Work Experience</h2>
 
   <div class="entry">
-    <div class="entry-role">Full Stack Developer &amp; DevOps Engineer</div>
+    <div class="entry-role">Full Stack Web Developer</div>
     <div class="entry-company">Proficient Enterprises</div>
     <div class="entry-meta">August 2025 – Present &nbsp;·&nbsp; Cheyenne, Wyoming, USA &nbsp;·&nbsp; Remote</div>
     <ul>
-      <li><b>Alfresco Content Services:</b> custom data model design, Web Scripts development, and multi-strategy search (Lucene, CMIS, FTS).</li>
-      <li><b>Activiti/APS BPM:</b> design and implementation of business processes, task forms, workflow automation, and process variable management.</li>
-      <li><b>Keycloak:</b> LDAP federation, OAuth2/JWT, custom login themes, and SSO integration across services.</li>
-      <li><b>AWS deployments:</b> CodePipeline, S3, EC2, EKS (Kubernetes + Helm), OpenSearch · Aurora RDS: query optimization and index creation.</li>
-      <li>Resolved critical issues: ACT_EVT_LOG bloat (7GB+), Spring Batch tuning, and HikariCP connection pool exhaustion.</li>
-      <li>Orchestrated MySQL to PostgreSQL and Docker to Kubernetes migrations across production and test environments.</li>
-      <li><b>AI automation:</b> n8n workflows with RAG pipelines, OpenAI embeddings, and pgvector integration.</li>
+      <li>Developed internal portals and dashboards with React and TypeScript, and built REST APIs in Node.js/NestJS and Python to integrate Alfresco, Activiti, Keycloak, and AWS services.</li>
+      <li>Designed custom content models, Web Scripts, and multi-strategy search (Lucene, CMIS, FTS) in Alfresco Content Services to support enterprise document management requirements.</li>
+      <li>Built BPM solutions on Activiti/APS, including business process design, task forms, approval automation, and process variable management for enterprise workflows.</li>
+      <li>Diagnosed and resolved a critical ACT_EVT_LOG growth incident (7GB+), tuning Spring Batch jobs and HikariCP pool configuration to restore production database performance.</li>
+      <li>Implemented identity management with Keycloak, integrating LDAP federation, OAuth2/JWT flows, custom login themes, and cross-service SSO.</li>
+      <li>Managed AWS infrastructure (S3, EC2, EKS with Kubernetes and Helm, OpenSearch) and optimized Aurora RDS queries for enterprise workloads.</li>
+      <li>Led production migrations from MySQL to PostgreSQL and from Docker Compose to Kubernetes.</li>
+      <li>Designed AI agents and RAG pipelines with LangChain and LangGraph, using OpenAI embeddings and pgvector for semantic search, and orchestrated automation workflows with n8n.</li>
     </ul>
   </div>
 
   <div class="entry">
     <div class="entry-role">Full Stack Web Developer</div>
     <div class="entry-company">ConoSurIT</div>
-    <div class="entry-meta">2022 – 2023 &nbsp;·&nbsp; Córdoba, Argentina</div>
+    <div class="entry-meta">October 2022 – August 2025 &nbsp;·&nbsp; Córdoba, Argentina &nbsp;·&nbsp; Remote</div>
     <ul>
-      <li>Built and maintained enterprise web applications focused on document management and workflow automation using Angular, Node.js, and PostgreSQL.</li>
-      <li>Improved application performance by ~40% through component architecture refactoring and lazy loading strategies.</li>
-      <li>Designed and implemented a microservices-based backend that increased system modularity and scalability.</li>
-      <li>Handled task coordination within the development team, acting as technical reference during sprints.</li>
+      <li>Developed and maintained enterprise web applications for document management and workflow automation using Angular, Node.js, and PostgreSQL.</li>
+      <li>Improved application performance by ~40% by refactoring component architecture and introducing lazy loading strategies.</li>
+      <li>Migrated a monolithic backend to a microservices architecture, increasing system modularity and scalability.</li>
       <li>Built REST APIs and integrated Alfresco CMIS for document storage and retrieval workflows.</li>
+      <li>Acted as technical reference for the development team, coordinating tasks and reviewing implementation decisions during sprints.</li>
     </ul>
   </div>
 
   <!-- EDUCATION -->
-  <h2 class="page-break">Education</h2>
+  <h2>Education</h2>
 
   <div class="entry">
     <div class="edu-header">
@@ -196,19 +205,12 @@
   <h2>Technical Skills</h2>
 
   <div class="skills-list">
-    <div><span class="skill-label">Frontend:</span> Angular 12/16, React.js, Next.js, TypeScript, Redux, Tailwind CSS, Material UI, Bootstrap</div>
-    <div><span class="skill-label">Backend:</span> Node.js, NestJS, Express.js, REST APIs, JWT, Sequelize, Python</div>
+    <div><span class="skill-label">Frontend:</span> TypeScript, React, Next.js, Angular</div>
+    <div><span class="skill-label">Backend:</span> Node.js, NestJS, Express.js, REST APIs, Python</div>
     <div><span class="skill-label">Databases:</span> PostgreSQL, MongoDB, Aurora RDS, pgvector, OpenSearch</div>
-    <div><span class="skill-label">DevOps &amp; Cloud:</span> AWS (EC2, S3, ECS, EKS, Lambda), Kubernetes, Helm, Docker, CI/CD, GitHub Actions, Linux</div>
-    <div><span class="skill-label">Enterprise Platforms:</span> Alfresco (CMIS, Web Scripts, FTS), Keycloak (OAuth2, LDAP, JWT, SSO), Activiti/APS</div>
-    <div><span class="skill-label">AI &amp; Automation:</span> LangChain, LangGraph, RAG, AI Agents, Prompt Engineering, OpenAI API, n8n, Hugging Face</div>
-    <div><span class="skill-label">Tools:</span> Cursor · GitHub Copilot · Claude · Codex · N8N · MCPs · AI-driven development · Figma · Notion · Jira · VS Code</div>
-  </div>
-
-  <!-- SOFT SKILLS -->
-  <h2>Soft Skills</h2>
-  <div class="soft-line">
-    Team Work &nbsp;·&nbsp; Communication &nbsp;·&nbsp; Adaptability &nbsp;·&nbsp; Problem Solving &nbsp;·&nbsp; Self-taught &nbsp;·&nbsp; Proactivity &nbsp;·&nbsp; Technical Leadership
+    <div><span class="skill-label">Cloud &amp; DevOps:</span> AWS, EKS, Kubernetes, Docker, Helm, CI/CD, GitHub Actions, Linux</div>
+    <div><span class="skill-label">Enterprise:</span> Alfresco, Keycloak, Activiti/APS</div>
+    <div><span class="skill-label">AI &amp; Automation:</span> OpenAI API, RAG, LangChain, LangGraph, AI Agents, n8n</div>
   </div>
 
   <!-- LANGUAGES -->
